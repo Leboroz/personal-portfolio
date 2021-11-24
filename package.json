@@ -4,7 +4,9 @@
   "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass --watch styles:assets/css"
+    "compile:sass": "sass --watch styles:assets/css",
+    "stylelint": "npx stylelint \"**/*.{css,scss}\" --fix",
+    "webhint": "npx hint ."
   },
   "repository": {
     "type": "git",
