@@ -1,0 +1,11 @@
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  .icon-wrapper {
+    i {
+      margin-top: 19px;
+      margin-right: 16px;
+      font-size: 30px;
+    }
+  }
+}
