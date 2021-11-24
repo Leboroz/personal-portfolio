@@ -1,0 +1,26 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "description": "![](https://img.shields.io/badge/Microverse-blueviolet)",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass --watch styles:assets/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Leboroz/personal-portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "proyects",
+    "Leonardo",
+    "Albornoz",
+    "microverse"
+  ],
+  "author": "Leonardo Albornoz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Leboroz/personal-portfolio/issues"
+  },
+  "homepage": "https://github.com/Leboroz/personal-portfolio#readme"
+}
