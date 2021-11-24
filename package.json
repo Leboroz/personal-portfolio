@@ -22,5 +22,12 @@
   "bugs": {
     "url": "https://github.com/Leboroz/personal-portfolio/issues"
   },
-  "homepage": "https://github.com/Leboroz/personal-portfolio#readme"
+  "homepage": "https://github.com/Leboroz/personal-portfolio#readme",
+  "devDependencies": {
+    "hint": "^6.1.9",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^21.0.0",
+    "stylelint-csstree-validator": "^1.9.0",
+    "stylelint-scss": "^3.21.0"
+  }
 }

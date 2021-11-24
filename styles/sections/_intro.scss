@@ -1,4 +1,5 @@
 @use '../custom' as *;
+
 .display-1 {
   font-style: normal;
   font-weight: normal;
@@ -15,6 +16,7 @@
   letter-spacing: -0.01em;
   color: $primary;
 }
+
 .intro-mobile-image {
   width: 100%;
   margin: 30px 0;
