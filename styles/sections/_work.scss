@@ -2,32 +2,36 @@
 
 .work-section {
   display: grid;
+
   .project-card {
     // .img-wrapper{
-      img {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
     // }
     .card-body {
       padding: 20px;
       background-color: $primary;
+
       .card-header {
         margin: 0;
         font-style: normal;
         font-weight: 300;
         font-size: 20px;
         line-height: 80%;
-        color: #FFF;
+        color: #fff;
       }
+
       .languages {
         list-style-type: none;
         display: flex;
         padding: 0;
         gap: 10px;
+
         .lang {
-          background-color: #98DEDE;
+          background-color: #98dede;
           padding: 6px 10px;
           font-style: normal;
           font-weight: 300;
@@ -36,13 +40,15 @@
           color: $primary;
         }
       }
+
       .project-link {
         width: fit-content;
         display: block;
-        border: 1px solid #FFF;
+        border: 1px solid #fff;
         padding: 10px;
         text-decoration: none;
-        color: #FFF;
+        color: #fff;
+
         i {
           margin-left: 12px;
         }
