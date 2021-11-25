@@ -18,9 +18,12 @@ h1 {
   background-color: #1a2236;
   width: 100%;
   padding: 12px 0;
-  font-style: normal;
+  border: none;
+}
+.btn span {
   font-weight: 500;
-  font-size: 16px;
+  font-style: normal;
+  font-size: 18px;
   line-height: 24px;
   text-align: center;
   color: #fff;
@@ -103,6 +106,60 @@ h1 {
 }
 .work-section .project-card .card-body .project-link i {
   margin-left: 12px;
+}
+
+.about-section .about-header .btn i {
+  margin-left: 20px;
+}
+.about-section .squares-wrapper {
+  display: grid;
+  row-gap: 16px;
+  margin: 50px 0;
+}
+.about-section .squares-wrapper .square {
+  position: relative;
+  width: 224px;
+  height: 224px;
+  padding: 50px;
+}
+.about-section .squares-wrapper .square h2 {
+  margin: 0;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 22px;
+  color: #FFF;
+}
+.about-section .squares-wrapper .square ul {
+  padding: 0;
+  margin: 0 25px;
+}
+.about-section .squares-wrapper .square ul li {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 27px;
+  letter-spacing: -0.0525em;
+  color: #FFF;
+}
+.about-section .squares-wrapper .square ul li span {
+  position: relative;
+  left: -10px;
+}
+.about-section .squares-wrapper .square-1 {
+  background: #1C528A;
+}
+.about-section .squares-wrapper .square-2 {
+  background: #E2505C;
+}
+.about-section .squares-wrapper .square-3 {
+  background: #FEBF52;
+}
+.about-section .squares-wrapper .square img {
+  top: calc(100% - 102px);
+  left: calc(100% - 102px);
+  position: absolute;
 }
 
 /*# sourceMappingURL=styles.css.map */

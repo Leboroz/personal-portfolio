@@ -4,10 +4,14 @@
   background-color: $primary;
   width: 100%;
   padding: 12px 0;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  text-align: center;
-  color: #fff;
+  border: none;
+ 
+  span {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+  }
 }
