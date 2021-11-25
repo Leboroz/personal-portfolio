@@ -4,12 +4,8 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1 {
+  margin: 32px 0;
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
 }
 
@@ -34,7 +30,6 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
-
 .toolbar .icon-wrapper i {
   margin-top: 19px;
   margin-right: 16px;
@@ -62,3 +57,52 @@ h6 {
   width: 100%;
   margin: 30px 0;
 }
+
+.work-section {
+  display: grid;
+}
+.work-section .project-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.work-section .project-card .card-body {
+  padding: 20px;
+  background-color: #1a2236;
+}
+.work-section .project-card .card-body .card-header {
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 80%;
+  color: #FFF;
+}
+.work-section .project-card .card-body .languages {
+  list-style-type: none;
+  display: flex;
+  padding: 0;
+  gap: 10px;
+}
+.work-section .project-card .card-body .languages .lang {
+  background-color: #98DEDE;
+  padding: 6px 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 10.3334px;
+  line-height: 80%;
+  color: #1a2236;
+}
+.work-section .project-card .card-body .project-link {
+  width: fit-content;
+  display: block;
+  border: 1px solid #FFF;
+  padding: 10px;
+  text-decoration: none;
+  color: #FFF;
+}
+.work-section .project-card .card-body .project-link i {
+  margin-left: 12px;
+}
+
+/*# sourceMappingURL=styles.css.map */
