@@ -13,13 +13,14 @@ $position: calc(100% - 102px);
 
   .squares-wrapper {
     display: grid;
+    justify-content: center;
     row-gap: 16px;
     margin: 50px 0;
 
     .square {
       position: relative;
-      width: 224px;
-      height: 224px;
+      width: 189px;
+      height: 189px;
       padding: 50px;
 
       h2 {
@@ -46,8 +47,29 @@ $position: calc(100% - 102px);
 
           span {
             position: relative;
-            left: -10px;
+            left: -5px;
           }
+        }
+      }
+
+      .image {
+        top: $position;
+        left: $position;
+        position: absolute;
+        height: 102px;
+        width: 102px;
+        background-repeat: no-repeat;
+
+        &-lang {
+          background-image: url(../../assets/images/squares/ic_languages_mob.png);
+        }
+
+        &-framework {
+          background-image: url(../../assets/images/squares/ic_framework.png);
+        }
+
+        &-skills {
+          background-image: url(../../assets/images/squares/ic_skills.png);
         }
       }
 
@@ -61,12 +83,6 @@ $position: calc(100% - 102px);
 
       &-3 {
         background: #febf52;
-      }
-
-      img {
-        top: $position;
-        left: $position;
-        position: absolute;
       }
     }
   }

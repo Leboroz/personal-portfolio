@@ -4,16 +4,17 @@
   display: grid;
 
   .project-card {
-    // .img-wrapper{
     img {
       display: block;
       width: 100%;
       height: auto;
     }
-    // }
+
     .card-body {
       padding: 20px;
       background-color: $primary;
+      border: 0.333333px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(1px);
 
       .card-header {
         margin: 0;
