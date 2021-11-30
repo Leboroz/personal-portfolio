@@ -176,4 +176,63 @@ body {
   background: #febf52;
 }
 
+.contact-form {
+  background: #F9F9FA;
+}
+.contact-form .contact-mobile-image {
+  background-image: url(../../assets/images/contact-mobile.png);
+  width: 111px;
+  height: 74.02px;
+}
+.contact-form .content {
+  margin-bottom: 64px;
+}
+.contact-form .content .btn {
+  color: white;
+}
+.contact-form .content .form {
+  display: flex;
+  flex-direction: column;
+}
+.contact-form .content .form ul {
+  list-style: none;
+  padding: 0;
+}
+.contact-form .content .form ul li {
+  margin-bottom: 8px;
+}
+.contact-form .content .form ul li input, .contact-form .content .form ul li textarea {
+  background: #FFF;
+  border: 1px solid #DFDFE0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding: 23px 0 8px 16px;
+}
+.contact-form .content .form ul li textarea {
+  width: 100%;
+  height: 112px;
+  resize: none;
+  padding: 15px 16px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7D7C84;
+}
+.contact-form .content .form .field-wrapper {
+  position: relative;
+}
+.contact-form .content .form .field-wrapper label {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  color: #7D7C84;
+}
+
 /*# sourceMappingURL=styles.css.map */
