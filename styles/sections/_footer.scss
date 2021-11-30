@@ -1,3 +1,40 @@
 .footer {
-    background: #1A2236;
+  background: #1a2236;
+  margin: 0;
+  height: 118px;
+  padding-top: 32px;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+
+    a {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 24px;
+      color: #92dcdc;
+      text-decoration: none;
+
+      .link-image {
+        margin-left: 16px;
+      }
+    }
+
+    .links-to-social {
+      display: flex;
+      list-style: none;
+      padding: 0;
+      justify-content: space-between;
+
+      li {
+        a {
+          color: #fff;
+          font-size: 25px;
+        }
+      }
+    }
+  }
 }
