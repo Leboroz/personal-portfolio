@@ -16,6 +16,7 @@ body {
   border: none;
   border: 1px solid #1a2236;
 }
+
 .btn span {
   font-weight: 500;
   font-style: normal;
@@ -24,13 +25,16 @@ body {
   text-align: center;
   color: #fff;
 }
+
 .btn:hover {
   background-color: #fff;
   border: 1px solid #1a2236;
 }
+
 .btn:hover span {
   color: #1a2236;
 }
+
 .btn:focus {
   border: 2px solid #1a2236;
 }
@@ -39,6 +43,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
+
 .toolbar .icon-wrapper i {
   margin-top: 19px;
   margin-right: 16px;
@@ -74,17 +79,20 @@ body {
 .work-section {
   display: grid;
 }
+
 .work-section .project-card img {
   display: block;
   width: 100%;
   height: auto;
 }
+
 .work-section .project-card .card-body {
   padding: 20px;
   background-color: #1a2236;
   border: 0.333333px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(1px);
 }
+
 .work-section .project-card .card-body .card-header {
   margin: 0;
   font-style: normal;
@@ -93,12 +101,14 @@ body {
   line-height: 80%;
   color: #fff;
 }
+
 .work-section .project-card .card-body .languages {
   list-style-type: none;
   display: flex;
   padding: 0;
   gap: 10px;
 }
+
 .work-section .project-card .card-body .languages .lang {
   background-color: #98dede;
   padding: 6px 10px;
@@ -108,6 +118,7 @@ body {
   line-height: 80%;
   color: #1a2236;
 }
+
 .work-section .project-card .card-body .project-link {
   width: fit-content;
   display: block;
@@ -116,6 +127,7 @@ body {
   text-decoration: none;
   color: #fff;
 }
+
 .work-section .project-card .card-body .project-link i {
   margin-left: 12px;
 }
@@ -123,18 +135,21 @@ body {
 .about-section .about-header .btn span .fas {
   margin-left: 20px;
 }
+
 .about-section .squares-wrapper {
   display: grid;
   justify-content: center;
   row-gap: 16px;
   margin: 50px 0;
 }
+
 .about-section .squares-wrapper .square {
   position: relative;
   width: 189px;
   height: 189px;
   padding: 50px;
 }
+
 .about-section .squares-wrapper .square h2 {
   margin: 0;
   font-style: normal;
@@ -144,10 +159,12 @@ body {
   margin-bottom: 22px;
   color: #fff;
 }
+
 .about-section .squares-wrapper .square ul {
   padding: 0;
   margin: 0 25px;
 }
+
 .about-section .squares-wrapper .square ul li {
   font-style: normal;
   font-weight: 600;
@@ -156,10 +173,12 @@ body {
   letter-spacing: -0.0525em;
   color: #fff;
 }
+
 .about-section .squares-wrapper .square ul li span {
   position: relative;
   left: -5px;
 }
+
 .about-section .squares-wrapper .square .image {
   top: calc(100% - 102px);
   left: calc(100% - 102px);
@@ -168,21 +187,27 @@ body {
   width: 102px;
   background-repeat: no-repeat;
 }
+
 .about-section .squares-wrapper .square .image-lang {
   background-image: url(../../assets/images/squares/ic_languages_mob.png);
 }
+
 .about-section .squares-wrapper .square .image-framework {
   background-image: url(../../assets/images/squares/ic_framework.png);
 }
+
 .about-section .squares-wrapper .square .image-skills {
   background-image: url(../../assets/images/squares/ic_skills.png);
 }
+
 .about-section .squares-wrapper .square-1 {
   background: #1c528a;
 }
+
 .about-section .squares-wrapper .square-2 {
   background: #e2505c;
 }
+
 .about-section .squares-wrapper .square-3 {
   background: #febf52;
 }
@@ -190,14 +215,17 @@ body {
 .contact-form {
   background: #f9f9fa;
 }
+
 .contact-form .contact-mobile-image {
   background-image: url(../../assets/images/contact-mobile.png);
   width: 111px;
   height: 74.02px;
 }
+
 .contact-form .content {
   margin-bottom: 64px;
 }
+
 .contact-form .content .btn {
   font-style: normal;
   font-weight: 500;
@@ -206,17 +234,21 @@ body {
   text-align: center;
   color: #fff;
 }
+
 .contact-form .content .form {
   display: flex;
   flex-direction: column;
 }
+
 .contact-form .content .form ul {
   list-style: none;
   padding: 0;
 }
+
 .contact-form .content .form ul li {
   margin-bottom: 8px;
 }
+
 .contact-form .content .form ul li input,
 .contact-form .content .form ul li textarea {
   background: #fff;
@@ -226,6 +258,7 @@ body {
   width: 100%;
   padding: 23px 0 8px 16px;
 }
+
 .contact-form .content .form ul li textarea {
   width: 100%;
   height: 112px;
@@ -238,9 +271,11 @@ body {
   line-height: 21px;
   color: #7d7c84;
 }
+
 .contact-form .content .form .field-wrapper {
   position: relative;
 }
+
 .contact-form .content .form .field-wrapper label {
   position: absolute;
   top: 4px;
@@ -258,12 +293,14 @@ body {
   height: 118px;
   padding-top: 32px;
 }
+
 .footer div {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 15px;
 }
+
 .footer div a {
   font-style: normal;
   font-weight: 500;
@@ -272,18 +309,19 @@ body {
   color: #92dcdc;
   text-decoration: none;
 }
+
 .footer div a .link-image {
   margin-left: 16px;
 }
+
 .footer div .links-to-social {
   display: flex;
   list-style: none;
   padding: 0;
   justify-content: space-between;
 }
+
 .footer div .links-to-social li a {
   color: #fff;
   font-size: 25px;
 }
-
-/*# sourceMappingURL=styles.css.map */
