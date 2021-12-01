@@ -12,27 +12,6 @@
   .content {
     margin-bottom: 64px;
 
-    .btn {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      border: 1px solid #1a2236;
-      color: #fff;
-
-      &:hover {
-        background-color: #fff;
-        color: $primary;
-      }
-
-      &:focus {
-        background-color: #fff;
-        border: 2px solid #1a2236;
-        color: $primary;
-      }
-    }
-
     .form {
       display: flex;
       flex-direction: column;
