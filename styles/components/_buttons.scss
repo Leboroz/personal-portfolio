@@ -12,6 +12,7 @@
   line-height: 24px;
   text-align: center;
   color: #fff;
+
   @include respond-above(lg) {
     width: 254px;
     height: 70px;

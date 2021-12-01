@@ -23,8 +23,10 @@ $grid-breakpoints: (
       @content;
     }
 
-  // If the breakpoint doesn't exist in the map.
-  } @else {
+    // If the breakpoint doesn't exist in the map.
+  }
+
+  @else {
 
     // Log a warning.
     @warn 'Invalid breakpoint: #{$breakpoint}.';
@@ -46,6 +48,7 @@ body {
   font-size: 50px;
   line-height: 100%;
   color: $primary;
+
   @include respond-above(lg) {
     font-size: 110px;
   }
@@ -54,14 +57,15 @@ body {
 .margin-x {
   margin-left: 5%;
   margin-right: 5%;
-  @include respond-above(lg){
+
+  @include respond-above(lg) {
     margin-left: 10%;
     margin-right: 10%;
   }
 }
 
 .margin-top {
-  @include respond-above(lg){
+  @include respond-above(lg) {
     padding-top: 100px;
   }
 }

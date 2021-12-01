@@ -1,7 +1,23 @@
+@use '../custom' as *;
 $position: calc(100% - 102px);
 
 .about-section {
+  @include respond-above(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   .about-header {
+    @include respond-above(lg) {
+      width: calc(50% - 96px);
+      padding-top: 28px;
+      padding-left: 96px;
+
+      .btn {
+        margin-top: 42px;
+      }
+    }
+
     .btn {
       span {
         .fas {
@@ -16,6 +32,24 @@ $position: calc(100% - 102px);
     justify-content: center;
     row-gap: 16px;
     margin: 50px 0;
+
+    @include respond-above(lg) {
+      grid-template-columns: 50% 50%;
+      row-gap: 0;
+    }
+
+    .squares-decoration {
+      display: none;
+      background-image: url(../../assets/images/squares/decoration.svg);
+      height: 222px;
+      width: 222.01956176757812px;
+      justify-self: flex-end;
+      align-self: flex-end;
+
+      @include respond-above(lg) {
+        display: block;
+      }
+    }
 
     .square {
       position: relative;

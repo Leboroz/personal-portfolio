@@ -3,10 +3,12 @@
 .toolbar {
   display: flex;
   justify-content: space-between;
+
   .icon-wrapper {
     @include respond-above(lg) {
       display: none;
     }
+
     i {
       margin-top: 19px;
       margin-right: 16px;
@@ -28,16 +30,19 @@
     background-color: #fff;
     left: -100%;
     z-index: 10;
+
     @include respond-above(lg) {
       left: 0;
       height: 100px;
     }
+
     .nav-bar-mobile {
       &-top {
         height: 114px;
         width: 262.9998779296875px;
-        border-radius: 0px;
+        border-radius: 0;
         background-image: url(../../assets/images/IntroSection/nav-bar-top.svg);
+
         @include respond-above(lg) {
           display: none;
         }
@@ -47,15 +52,17 @@
         position: absolute;
         height: 150px;
         width: 320px;
-        left: 0px;
+        left: 0;
         top: calc(100% - 150px);
-        border-radius: 0px;
+        border-radius: 0;
         background-image: url(../../assets/images/IntroSection/nav-bar-bottom.svg);
+
         @include respond-above(lg) {
           display: none;
         }
       }
     }
+
     .nav-links {
       list-style: none;
       padding: 0;
@@ -64,12 +71,14 @@
       font-style: normal;
       font-weight: 400;
       line-height: 48px;
-      letter-spacing: 0em;
+      letter-spacing: 0;
       text-align: center;
+
       a {
         text-decoration: none;
         color: $primary;
       }
+
       @include respond-above(lg) {
         height: 100%;
         display: flex;
