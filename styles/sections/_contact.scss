@@ -1,3 +1,5 @@
+@use "../custom" as *;
+
 .contact-form {
   background: #f9f9fa;
 
@@ -16,7 +18,19 @@
       font-size: 16px;
       line-height: 24px;
       text-align: center;
+      border: 1px solid #1a2236;
       color: #fff;
+
+      &:hover {
+        background-color: #fff;
+        color: $primary;
+      }
+
+      &:focus {
+        background-color: #fff;
+        border: 2px solid #1a2236;
+        color: $primary;
+      }
     }
 
     .form {
