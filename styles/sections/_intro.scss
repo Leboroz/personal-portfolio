@@ -1,6 +1,8 @@
 @use '../custom' as *;
 
 .display-1 {
+  margin: 32px 0;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 50px;

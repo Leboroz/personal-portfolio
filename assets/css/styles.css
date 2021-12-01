@@ -4,11 +4,6 @@ body {
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
-h1 {
-  margin: 32px 0;
-  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-}
-
 .margin-x {
   margin-left: 5%;
   margin-right: 5%;
@@ -19,6 +14,7 @@ h1 {
   width: 100%;
   padding: 12px 0;
   border: none;
+  border: 1px solid #1a2236;
 }
 
 .btn span {
@@ -28,6 +24,24 @@ h1 {
   line-height: 24px;
   text-align: center;
   color: #fff;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #1a2236;
+}
+
+.btn:hover span {
+  color: #1a2236;
+}
+
+.btn:focus {
+  border: 2px solid #1a2236;
+  background-color: #fff;
+}
+
+.btn:focus span {
+  color: #1a2236;
 }
 
 .toolbar {
@@ -42,6 +56,8 @@ h1 {
 }
 
 .display-1 {
+  margin: 32px 0;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 50px;
@@ -199,4 +215,130 @@ h1 {
 
 .about-section .squares-wrapper .square-3 {
   background: #febf52;
+}
+
+.contact-form {
+  background: #f9f9fa;
+}
+
+.contact-form .contact-mobile-image {
+  background-image: url(../../assets/images/contact-mobile.png);
+  width: 111px;
+  height: 74.02px;
+}
+
+.contact-form .content {
+  margin-bottom: 64px;
+}
+
+.contact-form .content .btn {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: center;
+  border: 1px solid #1a2236;
+  color: #fff;
+}
+
+.contact-form .content .btn:hover {
+  background-color: #fff;
+  color: #1a2236;
+}
+
+.contact-form .content .btn:focus {
+  background-color: #fff;
+  border: 2px solid #1a2236;
+  color: #1a2236;
+}
+
+.contact-form .content .form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form .content .form ul {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-form .content .form ul li {
+  margin-bottom: 8px;
+}
+
+.contact-form .content .form ul li input,
+.contact-form .content .form ul li textarea {
+  background: #fff;
+  border: 1px solid #dfdfe0;
+  box-sizing: border-box;
+  border-radius: 4px;
+  width: 100%;
+  padding: 23px 0 8px 16px;
+}
+
+.contact-form .content .form ul li textarea {
+  width: 100%;
+  height: 112px;
+  resize: none;
+  padding: 15px 16px;
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: #7d7c84;
+}
+
+.contact-form .content .form .field-wrapper {
+  position: relative;
+}
+
+.contact-form .content .form .field-wrapper label {
+  position: absolute;
+  top: 4px;
+  left: 16px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 15px;
+  color: #7d7c84;
+}
+
+.footer {
+  background: #1a2236;
+  margin: 0;
+  height: 118px;
+  padding-top: 32px;
+}
+
+.footer div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer div a {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #92dcdc;
+  text-decoration: none;
+}
+
+.footer div a .link-image {
+  margin-left: 16px;
+}
+
+.footer div .links-to-social {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  justify-content: space-between;
+}
+
+.footer div .links-to-social li a {
+  color: #fff;
+  font-size: 25px;
 }
