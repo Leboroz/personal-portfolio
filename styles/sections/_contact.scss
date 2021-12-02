@@ -36,6 +36,7 @@
     background-image: url(../../assets/images/contact-mobile.png);
     width: 111px;
     height: 74.02px;
+    align-self: start;
 
     @include respond-above(lg) {
       display: none;

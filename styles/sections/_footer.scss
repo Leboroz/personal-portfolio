@@ -6,6 +6,13 @@
   height: 118px;
   padding-top: 32px;
 
+  @include respond-above(lg) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+
   &-content {
     display: flex;
     flex-direction: column;
@@ -15,9 +22,11 @@
     @include respond-above(lg) {
       flex-direction: row;
       justify-content: space-between;
+      align-items: center;
+      width: 80%;
     }
 
-    .link-to-social {
+    .link-resume {
       font-style: normal;
       font-weight: 500;
       font-size: 16px;

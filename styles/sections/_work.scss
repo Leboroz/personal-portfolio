@@ -28,7 +28,7 @@
     &-1 {
       display: none;
       height: 350.0001220703125px;
-      width: 511px;
+      width: 100%;
       border-radius: 0;
       background-image: url(../../assets/images/projects/project-decoration.svg);
 
@@ -99,7 +99,7 @@
       @include respond-above(lg) {
         left: 0;
         top: calc(100% - 191px);
-        width: calc(100% - 40px);
+        width: calc(100% - 42px);
         position: absolute;
       }
 
@@ -179,8 +179,7 @@
         .card-body {
           padding: 60px;
           height: 233px;
-          width: calc(100% - 120px);
-          border-radius: 0;
+          width: calc(100% - 122px);
           top: calc(100% - 353px);
 
           .card-header {
@@ -222,7 +221,7 @@
 
         .card-body {
           padding: 40px;
-          width: calc(100% - 80px);
+          width: calc(100% - 84px);
           border-radius: 0;
           top: calc(100% - 295px + 190px);
 

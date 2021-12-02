@@ -203,6 +203,7 @@ body {
   height: 160px;
   margin: 30px 0;
   background-image: url(../../assets/images/IntroSection/intro-mobile.png);
+  background-repeat: no-repeat;
 }
 
 @media (min-width: 992px) {
@@ -230,8 +231,9 @@ body {
   .intro-section .desktop-image {
     display: block;
     background-image: url(../../assets/images/IntroSection/desktop-intro-image.svg);
-    background-size: cover;
-    width: 55%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 50%;
     height: 877px;
   }
 }
@@ -239,6 +241,7 @@ body {
 .dots-image {
   display: none;
   background-image: url(../../assets/images/IntroSection/image_dots.svg);
+  background-repeat: no-repeat;
   width: 175px;
   height: 175px;
   align-self: flex-end;
@@ -281,7 +284,7 @@ body {
 .work-section .project-decoration-1 {
   display: none;
   height: 350.0001220703px;
-  width: 511px;
+  width: 100%;
   border-radius: 0;
   background-image: url(../../assets/images/projects/project-decoration.svg);
 }
@@ -364,7 +367,7 @@ body {
   .work-section .project-card .card-body {
     left: 0;
     top: calc(100% - 191px);
-    width: calc(100% - 40px);
+    width: calc(100% - 42px);
     position: absolute;
   }
 }
@@ -451,8 +454,7 @@ body {
   .work-section .project-card-1 .card-body {
     padding: 60px;
     height: 233px;
-    width: calc(100% - 120px);
-    border-radius: 0;
+    width: calc(100% - 122px);
     top: calc(100% - 353px);
   }
 
@@ -494,7 +496,7 @@ body {
 
   .work-section .project-card-5 .card-body {
     padding: 40px;
-    width: calc(100% - 80px);
+    width: calc(100% - 84px);
     border-radius: 0;
     top: calc(100% - 295px + 190px);
   }
@@ -677,6 +679,7 @@ body {
   background-image: url(../../assets/images/contact-mobile.png);
   width: 111px;
   height: 74.02px;
+  align-self: start;
 }
 
 @media (min-width: 992px) {
@@ -807,6 +810,15 @@ body {
   padding-top: 32px;
 }
 
+@media (min-width: 992px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+}
+
 .footer-content {
   display: flex;
   flex-direction: column;
@@ -818,10 +830,12 @@ body {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    width: 80%;
   }
 }
 
-.footer-content .link-to-social {
+.footer-content .link-resume {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
@@ -830,7 +844,7 @@ body {
   text-decoration: none;
 }
 
-.footer-content .link-to-social .link-image {
+.footer-content .link-resume .link-image {
   margin-left: 16px;
 }
 
