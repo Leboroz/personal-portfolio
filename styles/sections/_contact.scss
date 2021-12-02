@@ -1,36 +1,60 @@
 @use "../custom" as *;
 
 .contact-form {
+  position: relative;
   background: #f9f9fa;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .contact-image {
+    position: absolute;
+    display: none;
+
+    @include respond-above(lg) {
+      display: block;
+    }
+
+    &-1 {
+      top: 0;
+      left: 0;
+      height: 350.8358154296875px;
+      width: 263.0625px;
+      background-image: url(../../assets/images/contact/contact-image-1.svg);
+    }
+
+    &-2 {
+      top: calc(100% - 350.8358154296875px);
+      left: calc(100% - 350.75px);
+      height: 350.8358154296875px;
+      width: 350.75px;
+      background-image: url(../../assets/images/contact/contact-image-2.svg);
+    }
+  }
 
   .contact-mobile-image {
     background-image: url(../../assets/images/contact-mobile.png);
     width: 111px;
     height: 74.02px;
+    align-self: start;
+
+    @include respond-above(lg) {
+      display: none;
+    }
   }
 
   .content {
     margin-bottom: 64px;
+    display: flex;
+    flex-direction: column;
 
-    .btn {
-      font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      text-align: center;
-      border: 1px solid #1a2236;
-      color: #fff;
+    @include respond-above(lg) {
+      width: 558px;
+    }
 
-      &:hover {
-        background-color: #fff;
-        color: $primary;
-      }
-
-      &:focus {
-        background-color: #fff;
-        border: 2px solid #1a2236;
-        color: $primary;
-      }
+    .display-1,
+    .par {
+      grid-column: 1/span 2;
     }
 
     .form {
@@ -40,6 +64,13 @@
       ul {
         list-style: none;
         padding: 0;
+
+        @include respond-above(lg) {
+          display: grid;
+          grid-template-columns: calc(50% - 17.25px) calc(50% - 17.25px);
+          column-gap: 35px;
+          row-gap: 42px;
+        }
 
         li {
           margin-bottom: 8px;
@@ -52,6 +83,21 @@
             border-radius: 4px;
             width: 100%;
             padding: 23px 0 8px 16px;
+            color: #7d7c84;
+            letter-spacing: 0;
+            font-size: 14px;
+
+            @include respond-above(lg) {
+              font-size: 16px;
+              padding: 18px 0 18px 20px;
+              font-weight: 400;
+              line-height: 24px;
+              color: $primary;
+            }
+          }
+
+          &:nth-child(3) {
+            grid-column: 1 / span 2;
           }
 
           textarea {
@@ -62,9 +108,12 @@
             font-family: "Poppins", Arial, Helvetica, sans-serif;
             font-style: normal;
             font-weight: normal;
-            font-size: 14px;
             line-height: 21px;
-            color: #7d7c84;
+
+            @include respond-above(lg) {
+              height: 140px;
+              border-radius: 4px;
+            }
           }
         }
       }
@@ -80,8 +129,20 @@
           font-weight: normal;
           font-size: 10px;
           line-height: 15px;
+          letter-spacing: 0;
           color: #7d7c84;
+
+          @include respond-above(lg) {
+            position: static;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 18px;
+          }
         }
+      }
+
+      .btn {
+        align-self: center;
       }
     }
   }

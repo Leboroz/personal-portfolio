@@ -1,16 +1,32 @@
+@use '../custom' as *;
+
 .footer {
   background: #1a2236;
   margin: 0;
   height: 118px;
   padding-top: 32px;
 
-  div {
+  @include respond-above(lg) {
+    display: flex;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+  }
+
+  &-content {
     display: flex;
     flex-direction: column;
     justify-content: center;
     gap: 15px;
 
-    a {
+    @include respond-above(lg) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 80%;
+    }
+
+    .link-resume {
       font-style: normal;
       font-weight: 500;
       font-size: 16px;
@@ -29,8 +45,12 @@
       padding: 0;
       justify-content: space-between;
 
+      @include respond-above(lg) {
+        gap: 32px;
+      }
+
       li {
-        a {
+        .link-to-social {
           color: #fff;
           font-size: 25px;
         }

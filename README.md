@@ -35,9 +35,16 @@ Open a terminal or a git bash in the desired directory and run ```git clone http
 
 👤 **Leonardo Albornoz**
 
-- GitHub: [@Leboroz](https://github.com/leboroz)
-- Twitter: [@Leboroz](https://twitter.com/leboroz)
-- LinkedIn: [Leonardo Albornoz](https://linkedin.com/in/linkedinhandle)
+- **GitHub**: [@Leboroz](https://github.com/leboroz)
+- **Twitter**: [@Leboroz](https://twitter.com/leboroz)
+- **LinkedIn**: [Leonardo Albornoz](https://linkedin.com/in/linkedinhandle)
+
+👤 **Reem**
+
+ Platform | Badge |
+ --- | --- |
+- **GitHub** | [![@Reem-Lab](https://img.shields.io/github/followers/reem-lab?label=Reem-Lab&style=social)](https://github.com/reem-lab)
+- **Twitter**| [![@Rem79940127](https://img.shields.io/twitter/follow/Rem79940127?label=Rem79940127&style=social)](https://twitter.com/Rem79940127)
 
 ## 🤝 Contributing
 

@@ -1,12 +1,71 @@
 $primary: #1a2236;
 
+// MEDIA BREAKPOINTS
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);
+
+@mixin respond-above($breakpoint) {
+
+  // If the breakpoint exists in the map.
+  @if map-has-key($grid-breakpoints, $breakpoint) {
+
+    // Get the breakpoint value.
+    $breakpoint-value: map-get($grid-breakpoints, $breakpoint);
+
+    // Write the media query.
+    @media (min-width: $breakpoint-value) {
+      @content;
+    }
+
+    // If the breakpoint doesn't exist in the map.
+  }
+
+  @else {
+
+    // Log a warning.
+    @warn 'Invalid breakpoint: #{$breakpoint}.';
+  }
+}
+
+// DEFAULT BODY
 body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
 
+.display-1 {
+  margin: 32px 0;
+  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 50px;
+  line-height: 100%;
+  color: $primary;
+
+  @include respond-above(lg) {
+    font-size: 110px;
+  }
+}
+
 .margin-x {
   margin-left: 5%;
   margin-right: 5%;
+
+  @include respond-above(lg) {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
+
+.margin-top {
+  @include respond-above(lg) {
+    padding-top: 100px;
+  }
 }

@@ -1,27 +1,65 @@
 @use '../custom' as *;
 
-.display-1 {
-  margin: 32px 0;
-  font-family: "Playfair Display", Arial, Helvetica, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 50px;
-  line-height: 100%;
-  color: $primary;
+.intro-section {
+  @include respond-above(lg) {
+    display: flex;
+  }
+
+  .par {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+    letter-spacing: -0.01em;
+    color: $primary;
+  }
+
+  .content {
+    @include respond-above(lg) {
+      width: 40%;
+      margin-top: 160px;
+      display: flex;
+      flex-direction: column;
+      gap: 46px;
+      margin-right: 0;
+    }
+  }
+
+  .desktop-image {
+    display: none;
+
+    @include respond-above(lg) {
+      display: block;
+      background-image: url(../../assets/images/IntroSection/desktop-intro-image.svg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+      width: 50%;
+      height: 877px;
+    }
+  }
 }
 
-.par {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 21px;
-  letter-spacing: -0.01em;
-  color: $primary;
+.dots-image {
+  display: none;
+  background-image: url(../../assets/images/IntroSection/image_dots.svg);
+  background-repeat: no-repeat;
+  width: 175px;
+  height: 175px;
+  align-self: flex-end;
+  margin-top: -30px;
+
+  @include respond-above(lg) {
+    display: block;
+  }
 }
 
 .intro-mobile-image {
   width: 100%;
   height: 160px;
   margin: 30px 0;
-  background-image: url(../../assets/images/intro-mobile.png);
+  background-image: url(../../assets/images/IntroSection/intro-mobile.png);
+
+  @include respond-above(lg) {
+    display: none;
+  }
 }
