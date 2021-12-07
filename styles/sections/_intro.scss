@@ -3,6 +3,10 @@
 .intro-section {
   @include respond-above(lg) {
     display: flex;
+    
+    .content-wrapper {
+      margin-right: 96px;
+      }
   }
 
   .par {

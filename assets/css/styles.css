@@ -23,6 +23,11 @@ body {
 }
 @media (min-width: 992px) {
   .display-1 {
+    font-size: 80px;
+  }
+}
+@media (min-width: 1200px) {
+  .display-1 {
     font-size: 110px;
   }
 }
@@ -174,6 +179,9 @@ body {
 @media (min-width: 992px) {
   .intro-section {
     display: flex;
+  }
+  .intro-section .content-wrapper {
+    margin-right: 96px;
   }
 }
 .intro-section .par {

@@ -57,7 +57,11 @@ body {
   line-height: 100%;
   color: $primary;
 
-  @include respond-above(lg) {
+  @include respond-above(lg){
+    font-size: 80px;
+  }
+
+  @include respond-above(xl) {
     font-size: 110px;
   }
 }
