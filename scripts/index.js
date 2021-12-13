@@ -1,15 +1,14 @@
 window.onload = function () {
-  let hamburgerMenu = document.querySelector('#hamburger');
-  let menu = document.querySelector('#menu');
-  let closeMenu = document.querySelector('#closeMenu');
-  let closeNavLink = document.querySelectorAll('li.nav-link a');
-  let openAndClose = function () {
+  const hamburgerMenu = document.querySelector('#hamburger');
+  const menu = document.querySelector('#menu');
+  const closeMenu = document.querySelector('#closeMenu');
+  const closeNavLink = document.querySelectorAll('li.nav-link a');
+  const openAndClose = function () {
     menu.classList.toggle('visible-menu');
-  }
-  console.log(closeNavLink);
+  };
   hamburgerMenu.addEventListener('click', openAndClose);
   closeMenu.addEventListener('click', openAndClose);
-  closeNavLink.forEach(element => {
+  closeNavLink.forEach((element) => {
     element.addEventListener('click', openAndClose);
   });
-}
+};
