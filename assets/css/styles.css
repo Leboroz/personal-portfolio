@@ -1,5 +1,4 @@
 body {
-  box-sizing: border-box;
   margin: 0 auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
@@ -86,6 +85,7 @@ body {
 }
 
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -98,7 +98,7 @@ body {
 }
 @media (min-width: 992px) {
   .modal-container {
-    width: calc(100vw - 140px);
+    width: calc(100% - 140px);
     height: calc(100vh - 140px);
     padding: 70px;
   }
@@ -187,6 +187,10 @@ body {
     display: flex;
     margin-top: 120px;
   }
+}
+
+.open-modal {
+  display: block;
 }
 
 .toolbar {

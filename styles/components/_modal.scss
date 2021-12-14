@@ -1,5 +1,6 @@
 @use '../custom' as *;
 .modal-container {
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,7 +11,7 @@
   background: linear-gradient(0deg, rgba(26, 34, 54, 0.95), rgba(26, 34, 54, 0.95));
   backdrop-filter: blur(24px);
   @include respond-above(lg) {
-    width: calc(100vw - 140px);
+    width: calc(100% - 140px);
     height: calc(100vh - 140px);
     padding: 70px;
   }
@@ -96,4 +97,7 @@
       }
     }
   }
+}
+.open-modal {
+  display: block;
 }
