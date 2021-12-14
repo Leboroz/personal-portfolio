@@ -1,0 +1,99 @@
+@use '../custom' as *;
+.modal-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  z-index: 11;
+  background: linear-gradient(0deg, rgba(26, 34, 54, 0.95), rgba(26, 34, 54, 0.95));
+  backdrop-filter: blur(24px);
+  @include respond-above(lg) {
+    width: calc(100vw - 140px);
+    height: calc(100vh - 140px);
+    padding: 70px;
+  }
+  .modal {
+    width: 100% - (4,615384615% * 2);
+    min-height: 100vh;
+    background-color: #fff;
+    padding: 4.615384615%;
+    @include respond-above(lg){
+      padding: 60px;
+
+    }
+    .top {
+      .display-2{
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 16px;
+        letter-spacing: 0em;
+        color: $primary;
+        @include respond-above(lg) {
+          font-size: 60px;
+          line-height: 48px;
+        }
+
+      }
+      .close-modal{
+        position: absolute;
+        top: 19px;
+        right: 19px;
+        font-size: 30px;
+      }
+    }
+    .image-wrap{
+      .modal-image {
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    .modal-languages {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: 10px;
+      list-style: none;
+      .modal-language {
+        padding: 6px 10px;
+        border: 0.516669px solid #1A2236;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 8px;
+        letter-spacing: 0em;
+        color: $primary;
+        @include respond-above(lg) {
+          padding: 12px 20px;
+          font-family: Poppins;
+          font-size: 20px;
+          line-height: 16px;
+        }
+      }
+    }
+    .modal-body {
+      @include respond-above(lg) {
+        width: 100% - (23.076923077% * 2);
+        padding: 0 23.076923077%;
+      }
+      .go-to-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 29px;
+        @include respond-above(lg){
+          flex-direction: row;
+        }
+      }
+      .slider-wrapper {
+        display: none;
+        @include respond-above(lg){
+          display: flex;
+          margin-top: 120px;
+        }
+      }
+    }
+  }
+}
