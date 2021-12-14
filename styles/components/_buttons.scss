@@ -44,4 +44,30 @@
       color: $primary;
     }
   }
+
+  &-secondary {
+    background-color: #fff;
+    color: $primary;
+    text-decoration: none;
+
+    a {
+      width: 100%;
+      padding: 12px 22px;
+    }
+
+    @include respond-above(lg) {
+      height: auto;
+    }
+  }
+
+  &-secondary:hover {
+    background-color: $primary;
+    color: #fff;
+  }
+
+  &-secondary:focus {
+    border: 2px solid #1a2236;
+    background-color: #fff;
+    color: $primary;
+  }
 }
