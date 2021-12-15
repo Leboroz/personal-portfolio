@@ -142,4 +142,12 @@ window.onload = function () {
   projectButtons.forEach((button) => {
     button.addEventListener('click', openModal);
   });
+
+  const form = document.getElementById('form');
+  const email = document.getElementById('email');
+  form.addEventListener('submit', (e) => {
+    if (email.value === email.value.toLowerCase()){
+      e.preventDefault();
+    }
+  });
 };
