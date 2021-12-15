@@ -145,8 +145,24 @@ window.onload = function () {
 
   const form = document.getElementById('form');
   const email = document.getElementById('email');
+
+  const closeError = ({ target }) => {
+    document.querySelector('body').removeChild(target.parentNode);
+  };
+  const showError = (message) => {
+    const error = document.createElement('div');
+    error.className = 'error';
+    error.innerHTML = `<span id="close_error" class="close-error">x</span>
+      <p class="par">${message}</p>
+      <button id="ok_error" class="btn">Ok</button>
+      `;
+    document.querySelector('body').appendChild(error);
+    document.querySelector('#close_error').addEventListener('click', closeError);
+    document.querySelector('#ok_error').addEventListener('click', closeError);
+  };
   form.addEventListener('submit', (e) => {
-    if (email.value === email.value.toLowerCase()){
+    if (email.value !== email.value.toLowerCase()) {
+      showError('The email should be lower-case!');
       e.preventDefault();
     }
   });
