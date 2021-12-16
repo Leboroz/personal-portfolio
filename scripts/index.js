@@ -168,43 +168,49 @@ window.onload = function () {
   });
 
   function storageAvailable(type) {
-    var storage;
+    let storage;
     try {
-        storage = window[type];
-        var x = '__storage_test__';
-        storage.setItem(x, x);
-        storage.removeItem(x);
-        return true;
-    }
-    catch(e) {
-        return e instanceof DOMException && (
-            // everything except Firefox
-            e.code === 22 ||
-            // Firefox
-            e.code === 1014 ||
-            // test name field too, because code might not be present
-            // everything except Firefox
-            e.name === 'QuotaExceededError' ||
-            // Firefox
-            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
-            // acknowledge QuotaExceededError only if there's something already stored
-            (storage && storage.length !== 0);
+      storage = window[type];
+      const x = '__storage_test__';
+      storage.setItem(x, x);
+      storage.removeItem(x);
+      return true;
+    } catch (e) {
+      return e instanceof DOMException && (
+        // everything except Firefox
+        e.code === 22
+        // Firefox
+        || e.code === 1014
+        // test name field too, because code might not be present
+        // everything except Firefox
+        || e.name === 'QuotaExceededError'
+        // Firefox
+        || e.name === 'NS_ERROR_DOM_QUOTA_REACHED')
+        // acknowledge QuotaExceededError only if there's something already stored
+        && (storage && storage.length !== 0);
     }
   }
 
-  const userName = document.getElementById('name');
-  const textArea = document.getElementById('message');
-  const fields = { name: String, email : String, textArea: String };
+  const formFields = Array.of(...document.getElementsByClassName('form-field'));
+  let fields = { name: String, email: String, message: String };
 
   if (storageAvailable('localStorage')) {
     if (localStorage.getItem('fields')) {
       fields = JSON.parse(localStorage.getItem('fields'));
-      userName.value = fields.name;
-      email.value = fields.email;
-      textArea.value = fields.textArea;
+      formFields.forEach((field) => {
+        if (fields[field.id]) {
+          field.value = fields[field.id];
+        }
+      });
     }
-  }
-  else {
+  } else {
     console.log('Local Storage not available');
   }
+
+  formFields.forEach((field) => {
+    field.onkeydown = ({ target }) => {
+      fields[target.id] = target.value;
+      localStorage.setItem('fields', JSON.stringify(fields));
+    };
+  });
 };
