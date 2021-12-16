@@ -208,7 +208,7 @@ window.onload = function () {
   }
 
   formFields.forEach((field) => {
-    field.onkeydown = ({ target }) => {
+    field.onchange = ({ target }) => {
       fields[target.id] = target.value;
       localStorage.setItem('fields', JSON.stringify(fields));
     };
