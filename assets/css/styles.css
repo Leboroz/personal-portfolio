@@ -79,6 +79,7 @@ body {
 .btn:focus {
   border: 2px solid #1a2236;
   background-color: #fff;
+  color: #1a2236;
 }
 
 .btn:focus span {
@@ -266,6 +267,27 @@ body {
 
 .open-modal {
   display: block;
+}
+
+.error {
+  background-color: #fff;
+  position: fixed;
+  top: 150px;
+  left: calc(50% - 150px);
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #1a2236;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+  gap: 7px;
+}
+
+.error .close-error {
+  color: #1a2236;
+  align-self: flex-end;
+  font-size: 25px;
 }
 
 .toolbar {
