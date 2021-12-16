@@ -207,10 +207,13 @@ window.onload = function () {
     console.log('Local Storage not available');
   }
 
+  const updateHandler = ({ target }) => {
+    fields[target.id] = target.value;
+    localStorage.setItem('fields', JSON.stringify(fields));
+  };
+
   formFields.forEach((field) => {
-    field.onchange = ({ target }) => {
-      fields[target.id] = target.value;
-      localStorage.setItem('fields', JSON.stringify(fields));
-    };
+    field.addEventListener('change', updateHandler);
+    field.addEventListener('keypress', updateHandler);
   });
 };
