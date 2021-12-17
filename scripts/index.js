@@ -112,7 +112,7 @@ window.onload = function () {
       <span id="close_modal" class="close-modal">x</span>`;
     const languages = document.createElement('ul');
     languages.className = 'modal-languages';
-    for (let i = 0; i < project.languages; i += 1) {
+    for (let i = 0; i <= project.languages; i += 1) {
       const lang = document.createElement('li');
       lang.className = 'modal-language';
       lang.innerHTML = project.languages[i];
@@ -191,11 +191,11 @@ window.onload = function () {
     }
   }
 
-  const formFields = Array.of(...document.getElementsByClassName('form-field'));
+  const formFields = Array.of(...document.getElementsByClassName(form-field));
   let fields = { name: String, email: String, message: String };
 
   if (storageAvailable('localStorage')) {
-    if (localStorage.getItem('fields')) {
+    if (localStorage.getItem(fields)) {
       fields = JSON.parse(localStorage.getItem('fields'));
       formFields.forEach((field) => {
         if (fields[field.id]) {
