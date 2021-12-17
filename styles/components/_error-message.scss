@@ -1,6 +1,7 @@
 @use '../custom' as *;
 
 .error {
+  background: no-repeat url(../../assets/images/IntroSection/toolbar_mobile_img.png);
   background-color: #fff;
   position: fixed;
   top: 150px;
@@ -13,10 +14,23 @@
   border: 1px solid $primary;
   box-shadow: 5px 5px 10px rgba($color: #000, $alpha: 0.2);
   gap: 7px;
+  animation: slide 0.5s;
 
   .close-error {
     color: $primary;
     align-self: flex-end;
     font-size: 25px;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: 150px;
   }
 }

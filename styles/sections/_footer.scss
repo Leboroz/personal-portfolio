@@ -22,7 +22,7 @@
     @include respond-above(lg) {
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
+      align-items: baseline;
       width: 80%;
     }
 
@@ -53,6 +53,16 @@
         .link-to-social {
           color: #fff;
           font-size: 25px;
+
+          .fab {
+            transition: transform, color;
+            transition-duration: 0.75s;
+
+            &:hover {
+              transform: scale(1.4);
+              color: #92dcdc;
+            }
+          }
         }
       }
     }

@@ -49,6 +49,7 @@ body {
   line-height: 24px;
   text-align: center;
   color: #fff;
+  transition: background-color 0.2s;
 }
 
 @media (min-width: 992px) {
@@ -270,6 +271,7 @@ body {
 }
 
 .error {
+  background: no-repeat url(../../assets/images/IntroSection/toolbar_mobile_img.png);
   background-color: #fff;
   position: fixed;
   top: 150px;
@@ -282,12 +284,25 @@ body {
   border: 1px solid #1a2236;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
   gap: 7px;
+  animation: slide 0.5s;
 }
 
 .error .close-error {
   color: #1a2236;
   align-self: flex-end;
   font-size: 25px;
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: 150px;
+  }
 }
 
 .toolbar {
@@ -487,7 +502,7 @@ body {
 @media (min-width: 992px) {
   .work-section {
     grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 558px 540px 270px;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 }
 
@@ -571,8 +586,14 @@ body {
 
 @media (min-width: 992px) {
   .work-section .project-card {
-    height: 270px;
-    width: 465px;
+    width: 100%;
+  }
+
+  .work-section .project-card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: #000;
   }
 }
 
@@ -583,18 +604,26 @@ body {
 }
 
 .work-section .project-card .card-body {
-  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #1a2236;
   border: 0.333333px solid rgba(255, 255, 255, 0.1);
+  padding: 6.316620608%;
   backdrop-filter: blur(1px);
 }
 
 @media (min-width: 992px) {
   .work-section .project-card .card-body {
+    top: 100%;
+    opacity: 0;
+    pointer-events: none;
     left: 0;
-    top: calc(100% - 191px);
-    width: calc(100% - 42px);
+    height: 42.114695341%;
+    width: 87.086758784%;
     position: absolute;
+    transition: top, opacity;
+    transition-duration: 0.3s;
   }
 }
 
@@ -638,7 +667,7 @@ body {
 
 @media (min-width: 992px) {
   .work-section .project-card .card-body .languages .lang {
-    padding: 12px 20px;
+    padding: 2% 3%;
     font-size: 20px;
     font-weight: 300;
     line-height: 16px;
@@ -673,28 +702,10 @@ body {
 @media (min-width: 992px) {
   .work-section .project-card-1 {
     grid-column: 2/span 2;
-    height: 558px;
-    width: 100%;
-  }
-
-  .work-section .project-card-1 .card-body {
-    padding: 60px;
-    height: 233px;
-    width: calc(100% - 122px);
-    top: calc(100% - 353px);
   }
 
   .work-section .project-card-1 .card-body .card-header {
     font-size: 60px;
-    line-height: 48px;
-  }
-
-  .work-section .project-card-1 .card-body .lang {
-    margin-top: 34px;
-  }
-
-  .work-section .project-card-1 .card-body .project-link {
-    margin-top: 60px;
   }
 
   .work-section .project-card-2 {
@@ -715,16 +726,9 @@ body {
   }
 
   .work-section .project-card-5 {
-    width: calc(100% - 175px);
+    width: 81.4%;
     margin-top: -190px;
     grid-column: 1/span 2;
-  }
-
-  .work-section .project-card-5 .card-body {
-    padding: 40px;
-    width: calc(100% - 84px);
-    border-radius: 0;
-    top: calc(100% - 295px + 190px);
   }
 
   .work-section .project-card-5 .card-body .card-header {
@@ -732,17 +736,15 @@ body {
     line-height: 38px;
   }
 
-  .work-section .project-card-5 .card-body .lang {
-    margin-top: 24px;
-  }
-
-  .work-section .project-card-5 .card-body .project-link {
-    margin-top: 50px;
-  }
-
   .work-section .project-card-6 {
     margin-left: -175px;
   }
+}
+
+.play {
+  top: 36.151013659% !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
 
 @media (min-width: 992px) {
@@ -1056,7 +1058,7 @@ body {
   .footer-content {
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     width: 80%;
   }
 }
@@ -1090,4 +1092,14 @@ body {
 .footer-content .links-to-social li .link-to-social {
   color: #fff;
   font-size: 25px;
+}
+
+.footer-content .links-to-social li .link-to-social .fab {
+  transition: transform, color;
+  transition-duration: 0.75s;
+}
+
+.footer-content .links-to-social li .link-to-social .fab:hover {
+  transform: scale(1.4);
+  color: #92dcdc;
 }

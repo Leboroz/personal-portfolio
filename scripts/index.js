@@ -216,4 +216,12 @@ window.onload = function () {
     field.addEventListener('change', updateHandler);
     field.addEventListener('keypress', updateHandler);
   });
+  Array.of(...document.querySelectorAll('.project-card')).forEach((card) => {
+    card.addEventListener('mouseenter', (e) => {
+      e.target.children[1].classList.add('play');
+    });
+    card.addEventListener('mouseleave', (e) => {
+      e.target.children[1].classList.remove('play');
+    });
+  });
 };

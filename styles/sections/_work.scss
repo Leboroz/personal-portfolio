@@ -5,7 +5,7 @@
 
   @include respond-above(lg) {
     grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 558px 540px 270px;
+    grid-template-rows: 1fr 1fr 1fr;
   }
 
   &-header {
@@ -80,8 +80,14 @@
     position: relative;
 
     @include respond-above(lg) {
-      height: 270px;
-      width: 465px;
+      width: 100%;
+
+      &::after {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+      }
     }
 
     img {
@@ -91,16 +97,24 @@
     }
 
     .card-body {
-      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       background-color: $primary;
       border: 0.333333px solid rgba(255, 255, 255, 0.1);
+      padding: 6.316620608%;
       backdrop-filter: blur(1px);
 
       @include respond-above(lg) {
+        top: 100%;
+        opacity: 0;
+        pointer-events: none;
         left: 0;
-        top: calc(100% - 191px);
-        width: calc(100% - 42px);
+        height: 42.114695341%;
+        width: calc(99.72% - (6.316620608% * 2));
         position: absolute;
+        transition: top, opacity;
+        transition-duration: 0.3s;
       }
 
       .card-header {
@@ -138,7 +152,7 @@
           line-height: 8px;
 
           @include respond-above(lg) {
-            padding: 12px 20px;
+            padding: 2% 3%;
             font-size: 20px;
             font-weight: 300;
             line-height: 16px;
@@ -173,26 +187,10 @@
     @include respond-above(lg) {
       &-1 {
         grid-column: 2 / span 2;
-        height: 558px;
-        width: 100%;
 
         .card-body {
-          padding: 60px;
-          height: 233px;
-          width: calc(100% - 122px);
-          top: calc(100% - 353px);
-
           .card-header {
             font-size: 60px;
-            line-height: 48px;
-          }
-
-          .lang {
-            margin-top: 34px;
-          }
-
-          .project-link {
-            margin-top: 60px;
           }
         }
       }
@@ -215,27 +213,14 @@
       }
 
       &-5 {
-        width: calc(100% - 175px);
+        width: calc(81.4%);
         margin-top: -190px;
         grid-column: 1 / span 2;
 
         .card-body {
-          padding: 40px;
-          width: calc(100% - 84px);
-          border-radius: 0;
-          top: calc(100% - 295px + 190px);
-
           .card-header {
             font-size: 50px;
             line-height: 38px;
-          }
-
-          .lang {
-            margin-top: 24px;
-          }
-
-          .project-link {
-            margin-top: 50px;
           }
         }
       }
@@ -245,4 +230,10 @@
       }
     }
   }
+}
+
+.play {
+  top: calc(100% - 63.848986341%) !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
 }
