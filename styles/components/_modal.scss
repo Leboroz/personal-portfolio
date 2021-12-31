@@ -13,13 +13,13 @@
   backdrop-filter: blur(24px);
 
   @include respond-above(lg) {
-    width: calc(100% - 140px);
-    height: calc(100vh - 140px);
+    width: 100%;
+    height: 100vh;
     padding: 70px;
   }
 
   .modal {
-    width: calc(100% - (4.615384615% * 2));
+    width: 100%;
     min-height: 100vh;
     background-color: #fff;
     padding: 4.615384615%;
@@ -87,7 +87,7 @@
 
     .modal-body {
       @include respond-above(lg) {
-        width: calc(100% - (23.076923077% * 2));
+        width: 100%;
         padding: 0 23.076923077%;
       }
 

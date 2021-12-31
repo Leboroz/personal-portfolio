@@ -5,7 +5,7 @@
 
   @include respond-above(lg) {
     grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 558px 540px 270px;
+    grid-template-rows: 1fr 1fr auto auto;
   }
 
   &-header {
@@ -14,9 +14,9 @@
       flex-direction: column;
       align-items: flex-end;
       gap: 70px;
-      width: 558px;
       transform: rotate(-90deg);
-      padding-right: 200px;
+      height: fit-content;
+      padding-right: 100px;
 
       .display-1 {
         margin: 0;
@@ -40,9 +40,9 @@
     &-2 {
       display: none;
       height: 275.4178466796875px;
-      width: 639.75px;
+      width: 133%;
       border-radius: 0;
-      margin-left: -175px;
+      transform: translateX(-25%);
       background-image: url(../../assets/images/projects/project-decoration2.svg);
 
       @include respond-above(lg) {
@@ -80,8 +80,7 @@
     position: relative;
 
     @include respond-above(lg) {
-      height: 270px;
-      width: 465px;
+      width: 100%;
     }
 
     img {
@@ -91,16 +90,21 @@
     }
 
     .card-body {
-      padding: 20px;
+      padding: 7.1609726987915858570789198866179%;
       background-color: $primary;
       border: 0.333333px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(1px);
 
       @include respond-above(lg) {
         left: 0;
-        top: calc(100% - 191px);
-        width: calc(100% - 42px);
+        width: 100%;
+        top: 100%;
         position: absolute;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity, visibility, transform;
+        transition-duration: 0.7s;
+        z-index: 1;
       }
 
       .card-header {
@@ -153,7 +157,7 @@
         padding: 10px;
         text-decoration: none;
         color: #fff;
-
+        background-color: $primary;
         @include respond-above(lg) {
           background-color: #fff;
           color: $primary;
@@ -173,15 +177,9 @@
     @include respond-above(lg) {
       &-1 {
         grid-column: 2 / span 2;
-        height: 558px;
         width: 100%;
 
         .card-body {
-          padding: 60px;
-          height: 233px;
-          width: calc(100% - 122px);
-          top: calc(100% - 353px);
-
           .card-header {
             font-size: 60px;
             line-height: 48px;
@@ -198,12 +196,12 @@
       }
 
       &-2 {
-        justify-self: end;
         align-self: center;
-        margin-bottom: 100px;
+        transform: translateY(-36px);
       }
 
       &-3 {
+        align-self: start;
         grid-column-start: 3;
         grid-row-start: 2;
       }
@@ -215,16 +213,12 @@
       }
 
       &-5 {
-        width: calc(100% - 175px);
-        margin-top: -190px;
         grid-column: 1 / span 2;
-
+        transform: translateY(-40%);
+        width: 83.5%;
         .card-body {
           padding: 40px;
-          width: calc(100% - 84px);
           border-radius: 0;
-          top: calc(100% - 295px + 190px);
-
           .card-header {
             font-size: 50px;
             line-height: 38px;
@@ -245,4 +239,10 @@
       }
     }
   }
+}
+
+.slide-up {
+  transform: translateY(-100%);
+  opacity: 1!important;
+  visibility: visible!important;
 }

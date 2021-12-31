@@ -216,4 +216,16 @@ window.onload = function () {
     field.addEventListener('change', updateHandler);
     field.addEventListener('keypress', updateHandler);
   });
+
+  const projectCards = Array.of(...document.querySelectorAll('.project-card'));
+  projectCards.forEach(projectCard => {
+    projectCard.addEventListener('mouseenter', (e) => {
+      if(window.innerWidth > 991)
+       e.target.children[1].classList.add('slide-up');
+    });
+    projectCard.addEventListener('mouseleave', (e) => {
+      if(window.innerWidth > 991)
+        e.target.children[1].classList.remove('slide-up');
+    });
+  })
 };

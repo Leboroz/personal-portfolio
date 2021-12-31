@@ -35,6 +35,10 @@ $grid-breakpoints: (
 
 // DEFAULT BODY
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0 auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
@@ -45,13 +49,9 @@ body {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
+  font-size: clamp(50px, 8vw, 110px);
   line-height: 100%;
   color: $primary;
-
-  @include respond-above(lg) {
-    font-size: 110px;
-  }
 }
 
 .margin-x {

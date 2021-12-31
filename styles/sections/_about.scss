@@ -5,13 +5,13 @@ $position: calc(100% - 102px);
   @include respond-above(lg) {
     display: flex;
     flex-direction: row-reverse;
+    justify-content: space-between;
   }
 
   .about-header {
     @include respond-above(lg) {
       width: calc(50% - 96px);
       padding-top: 28px;
-      padding-left: 96px;
 
       .btn {
         margin-top: 42px;
@@ -53,8 +53,8 @@ $position: calc(100% - 102px);
 
     .square {
       position: relative;
-      width: 189px;
-      height: 189px;
+      width: 289px;
+      height: 289px;
       padding: 50px;
 
       h2 {
