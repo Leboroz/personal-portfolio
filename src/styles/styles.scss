@@ -1,0 +1,15 @@
+// IMPORT DEFAULT
+@import "custom";
+
+// IMPORT COMPONENTS
+@import "components/buttons";
+@import "components/modal";
+@import "components/error-message";
+
+// IMPORT SECTIONS
+@import "sections/toolbar";
+@import "sections/intro";
+@import "sections/work";
+@import "sections/about";
+@import "sections/contact";
+@import "sections/footer";
