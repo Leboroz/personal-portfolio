@@ -8,7 +8,8 @@
     "webhint": "hint .",
     "eslint": "eslint . --fix",
     "build": "webpack --config webpack.prod.js",
-    "start": "webpack serve --config webpack.dev.js --open"
+    "start": "webpack serve --config webpack.dev.js --open",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -34,11 +35,12 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.25.3",
+    "file-loader": "^6.2.0",
+    "gh-pages": "^3.2.3",
     "hint": "^6.1.9",
     "html-loader": "^3.1.0",
     "node-sass": "^7.0.1",
     "sass-loader": "^12.4.0",
-    "file-loader": "^6.2.0",
     "style-loader": "^3.3.1",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",

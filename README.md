@@ -4,7 +4,7 @@
 
 > One paragraph statement about the project.
 
-![screenshot](./assets/images/app.png)
+![screenshot](./src/assets/images/app.png)
 
 ## Built With
 
