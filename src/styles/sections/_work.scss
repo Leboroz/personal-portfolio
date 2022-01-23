@@ -5,7 +5,7 @@
 
   @include custom.respond-above(lg) {
     grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1.18fr auto auto;
   }
 
   &-header {
@@ -14,9 +14,9 @@
       flex-direction: column;
       align-items: flex-end;
       gap: 70px;
-      width: 558px;
       transform: rotate(-90deg);
-      padding-right: 200px;
+      height: fit-content;
+      padding-right: 100px;
 
       .display-1 {
         margin: 0;
@@ -40,10 +40,10 @@
     &-2 {
       display: none;
       height: 275.4178466796875px;
-      width: 639.75px;
+      width: 133%;
       border-radius: 0;
-      margin-left: -175px;
       background-image: url(../assets/images/projects/project-decoration2.svg);
+      transform: translateX(-25%);
 
       @include custom.respond-above(lg) {
         display: block;
@@ -78,16 +78,10 @@
 
   .project-card {
     position: relative;
-
+    overflow: hidden;
     @include custom.respond-above(lg) {
+      max-height: 278px;
       width: 100%;
-
-      &::after {
-        content: "";
-        width: 100%;
-        height: 100%;
-        background-color: #000;
-      }
     }
 
     img {
@@ -97,24 +91,20 @@
     }
 
     .card-body {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      padding: 7.1609726987915858570789198866179%;
       background-color: $primary;
       border: 0.333333px solid rgba(255, 255, 255, 0.1);
       padding: 6.316620608%;
       backdrop-filter: blur(1px);
 
       @include custom.respond-above(lg) {
-        top: 100%;
-        opacity: 0;
         pointer-events: none;
-        left: 0;
-        height: 42.114695341%;
-        width: calc(99.72% - (6.316620608% * 2));
-        position: absolute;
-        transition: top, opacity;
-        transition-duration: 0.3s;
+        width: 100%;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity, visibility, transform ease;
+        transition-duration: 500ms;
+        z-index: 1;
       }
 
       .card-header {
@@ -167,13 +157,13 @@
         padding: 10px;
         text-decoration: none;
         color: #fff;
-
-        @include custom.respond-above(lg) {
+        background-color: custom.$primary;
+        @include respond-above(lg) {
           background-color: #fff;
-          color: $primary;
+          color: custom.$primary;
 
           &:hover {
-            background-color: $primary;
+            background-color: custom.$primary;
             color: #fff;
           }
         }
@@ -187,7 +177,8 @@
     @include custom.respond-above(lg) {
       &-1 {
         grid-column: 2 / span 2;
-
+        width: 100%;
+        max-height: 463px;
         .card-body {
           .card-header {
             font-size: 60px;
@@ -196,12 +187,12 @@
       }
 
       &-2 {
-        justify-self: end;
         align-self: center;
-        margin-bottom: 100px;
+        transform: translateY(-36px);
       }
 
       &-3 {
+        align-self: start;
         grid-column-start: 3;
         grid-row-start: 2;
       }
@@ -213,11 +204,13 @@
       }
 
       &-5 {
-        width: calc(81.4%);
-        margin-top: -190px;
         grid-column: 1 / span 2;
-
+        transform: translateY(-40%);
+        width: 83.5%;
+        max-height: 463px;
         .card-body {
+          padding: 40px;
+          border-radius: 0;
           .card-header {
             font-size: 50px;
             line-height: 38px;
@@ -232,8 +225,8 @@
   }
 }
 
-.play {
-  top: calc(100% - 63.848986341%) !important;
+.slide-up {
+  transform: translateY(-100%);
   opacity: 1 !important;
-  pointer-events: auto !important;
+  visibility: visible !important;
 }

@@ -82,7 +82,7 @@ const projects = arrOfProjects.map((element, index) => {
   img.src = element.image;
   card.append(img);
   card.innerHTML += `
-    <div class="card-body">
+      <div class="card-body">
       <h2 class="card-header">${element.title}</h2>
       <ul class="languages">
         <li class="lang">${element.languages[0]}</li>
@@ -234,11 +234,14 @@ formFields.forEach((field) => {
   field.addEventListener("change", updateHandler);
   field.addEventListener("keypress", updateHandler);
 });
-Array.of(...document.querySelectorAll(".project-card")).forEach((card) => {
-  card.addEventListener("mouseenter", (e) => {
-    e.target.children[1].classList.add("play");
+
+const projectCards = Array.of(...document.querySelectorAll(".project-card"));
+projectCards.forEach((projectCard) => {
+  projectCard.addEventListener("mouseenter", (e) => {
+    if (window.innerWidth > 991) e.target.children[1].classList.add("slide-up");
   });
-  card.addEventListener("mouseleave", (e) => {
-    e.target.children[1].classList.remove("play");
+  projectCard.addEventListener("mouseleave", (e) => {
+    if (window.innerWidth > 991)
+      e.target.children[1].classList.remove("slide-up");
   });
 });

@@ -30,9 +30,20 @@ $grid-breakpoints: (
 
 // DEFAULT BODY
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0 auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
+.dark-mode {
+  background-color: #22272e;
 }
 
 .display-1 {
@@ -40,12 +51,23 @@ body {
   font-family: "Playfair Display", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: normal;
-  font-size: 50px;
+  font-size: clamp(50px, 8vw, 110px);
   line-height: 100%;
   color: $primary;
+  body.dark-mode & {
+    color: #fff;
+  }
+}
 
-  @include respond-above(lg) {
-    font-size: 110px;
+.par {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  letter-spacing: -0.01em;
+  color: $primary;
+  body.dark-mode & {
+    color: #fff;
   }
 }
 
