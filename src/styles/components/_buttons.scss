@@ -1,0 +1,75 @@
+@use "../custom";
+
+.btn {
+  background-color: custom.$primary;
+  width: 100%;
+  padding: 12px 0;
+  border: none;
+  border: 1px solid #1a2236;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  transition: background-color 0.2s;
+
+  @include custom.respond-above(lg) {
+    width: 254px;
+    height: 70px;
+  }
+
+  span {
+    font-weight: 500;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 24px;
+    text-align: center;
+    color: #fff;
+  }
+
+  &:hover {
+    background-color: #fff;
+    color: custom.$primary;
+
+    span {
+      color: custom.$primary;
+    }
+  }
+
+  &:focus {
+    border: 2px solid #1a2236;
+    background-color: #fff;
+    color: custom.$primary;
+
+    span {
+      color: custom.$primary;
+    }
+  }
+
+  &-secondary {
+    background-color: #fff;
+    color: custom.$primary;
+    text-decoration: none;
+
+    a {
+      width: 100%;
+      padding: 12px 22px;
+    }
+
+    @include custom.respond-above(lg) {
+      height: auto;
+    }
+  }
+
+  &-secondary:hover {
+    background-color: custom.$primary;
+    color: #fff;
+  }
+
+  &-secondary:focus {
+    border: 2px solid #1a2236;
+    background-color: #fff;
+    color: custom.$primary;
+  }
+}

@@ -1,0 +1,38 @@
+@use "../custom";
+
+.error {
+  background:
+    no-repeat
+    url("../assets/images/IntroSection/toolbar_mobile_img.png");
+  background-color: #fff;
+  position: fixed;
+  top: 150px;
+  left: calc(50% - 150px);
+  width: 300px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid custom.$primary;
+  box-shadow: 5px 5px 10px rgba($color: #000, $alpha: 0.2);
+  gap: 7px;
+  animation: slide 0.5s;
+
+  .close-error {
+    color: custom.$primary;
+    align-self: flex-end;
+    font-size: 25px;
+  }
+}
+
+@keyframes slide {
+  from {
+    opacity: 0;
+    top: 0;
+  }
+
+  to {
+    opacity: 1;
+    top: 150px;
+  }
+}
