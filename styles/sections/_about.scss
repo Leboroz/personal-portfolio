@@ -45,7 +45,7 @@ $position: calc(100% - 102px);
       width: 222.01956176757812px;
       justify-self: flex-end;
       align-self: flex-end;
-
+      
       @include respond-above(lg) {
         display: block;
       }
@@ -56,7 +56,6 @@ $position: calc(100% - 102px);
       width: 289px;
       height: 289px;
       padding: 50px;
-
       h2 {
         margin: 0;
         font-style: normal;

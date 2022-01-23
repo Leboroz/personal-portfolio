@@ -53,6 +53,15 @@
         .link-to-social {
           color: #fff;
           font-size: 25px;
+          
+          .fab {
+            transition: transform, color;
+            transition-duration: 0.7s;
+            &:hover {
+            color: #92dcdc;
+            transform: scale(1.5);
+          }
+          }
         }
       }
     }
