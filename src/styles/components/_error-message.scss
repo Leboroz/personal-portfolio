@@ -1,7 +1,8 @@
 @use "../custom";
 
 .error {
-  background: no-repeat
+  background:
+    no-repeat
     url("../assets/images/IntroSection/toolbar_mobile_img.png");
   background-color: #fff;
   position: fixed;

@@ -1,11 +1,11 @@
-const { resolve } = require("path");
-const { merge } = require("webpack-merge");
-const common = require("./webpack.config");
+const { resolve } = require('path');
+const { merge } = require('webpack-merge');
+const common = require('./webpack.config');
 
 module.exports = merge(common, {
-  mode: "production",
+  mode: 'production',
   output: {
-    filename: "[name].[contenthash].js",
-    path: resolve(__dirname, "dist"),
+    filename: '[name].[contenthash].js',
+    path: resolve(__dirname, 'dist'),
   },
 });

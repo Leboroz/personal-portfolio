@@ -31,8 +31,10 @@
     left: -100%;
     z-index: 10;
     transition: left 0.7s;
+
     body.dark-mode & {
       background-color: #2d333b;
+
       .nav-link {
         a {
           color: #fff;
@@ -73,6 +75,7 @@
         }
       }
     }
+
     .nav-bar-mobile-bottom {
       position: absolute;
       height: 150px;
@@ -111,9 +114,11 @@
           opacity: 0;
           width: 0;
           height: 0;
+
           &:checked + .slider {
             background-color: $primary;
             border-color: #fff;
+
             &::after {
               transform: translateX(-0.4px);
               background-color: #fff;
@@ -132,6 +137,7 @@
         .fa-moon {
           color: #fff;
         }
+
         .slider {
           position: absolute;
           border: 4px solid $primary;

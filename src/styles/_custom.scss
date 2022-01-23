@@ -22,7 +22,9 @@ $grid-breakpoints: (
     }
 
     // If the breakpoint doesn't exist in the map.
-  } @else {
+  }
+
+  @else {
     // Log a warning.
     @warn 'Invalid breakpoint: #{$breakpoint}.';
   }
@@ -42,6 +44,7 @@ body {
   margin: 0 auto;
   font-family: "Poppins", Arial, Helvetica, sans-serif;
 }
+
 .dark-mode {
   background-color: #22272e;
 }
@@ -54,6 +57,7 @@ body {
   font-size: clamp(50px, 8vw, 110px);
   line-height: 100%;
   color: $primary;
+
   body.dark-mode & {
     color: #fff;
   }
@@ -66,6 +70,7 @@ body {
   line-height: 21px;
   letter-spacing: -0.01em;
   color: $primary;
+
   body.dark-mode & {
     color: #fff;
   }

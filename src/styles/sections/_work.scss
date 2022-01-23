@@ -79,6 +79,7 @@
   .project-card {
     position: relative;
     overflow: hidden;
+
     @include custom.respond-above(lg) {
       max-height: 278px;
       width: 100%;
@@ -158,6 +159,7 @@
         text-decoration: none;
         color: #fff;
         background-color: custom.$primary;
+
         @include respond-above(lg) {
           background-color: #fff;
           color: custom.$primary;
@@ -179,6 +181,7 @@
         grid-column: 2 / span 2;
         width: 100%;
         max-height: 463px;
+
         .card-body {
           .card-header {
             font-size: 60px;
@@ -208,9 +211,11 @@
         transform: translateY(-40%);
         width: 83.5%;
         max-height: 463px;
+
         .card-body {
           padding: 40px;
           border-radius: 0;
+
           .card-header {
             font-size: 50px;
             line-height: 38px;

@@ -5,7 +5,7 @@
     display: flex;
   }
 
- 
+
 
   .content {
     @include custom.respond-above(lg) {
@@ -15,6 +15,7 @@
       flex-direction: column;
       gap: 46px;
       margin-right: 0;
+
       .main-card {
         display: flex;
         flex-direction: column;
