@@ -1,10 +1,5 @@
 import '../styles/styles.scss';
-import project1 from '../assets/images/projects/project-1.png';
-import project2 from '../assets/images/projects/project-2.svg';
-import project3 from '../assets/images/projects/project-3.svg';
-import project4 from '../assets/images/projects/project-4.svg';
-import project5 from '../assets/images/projects/project-5.svg';
-import project6 from '../assets/images/projects/project-6.svg';
+import arrOfProjects from './projects';
 
 const hamburgerMenu = document.querySelector('#hamburger');
 const menu = document.querySelector('#menu');
@@ -19,61 +14,6 @@ closeNavLink.forEach((element) => {
   element.addEventListener('click', openAndClose);
 });
 // ----------------------------------------------Array of projects
-const arrOfProjects = [
-  {
-    image: project1,
-    title: 'Project 1',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    description: 'This is a javascript book list application',
-    linkLiveVersion: 'https://leboroz.github.io/awesome-books',
-    linkToSource: 'https://github.com/Leboroz/awesome-books',
-  },
-  {
-    image: project2,
-    title: 'Project 2',
-    languages: ['HTML/CSS', 'Ruby on Rails', '+1'],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
-    linkLiveVersion: '#',
-    linkToSource: '#',
-  },
-  {
-    image: project3,
-    title: 'Project 3',
-    languages: ['HTML/CSS', 'Ruby on Rails', '+1'],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
-    linkLiveVersion: '#',
-    linkToSource: '#',
-  },
-  {
-    image: project4,
-    title: 'Project 4',
-    languages: ['HTML/CSS', 'Ruby on Rails', '+1'],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
-    linkLiveVersion: '#',
-    linkToSource: '#',
-  },
-  {
-    image: project5,
-    title: 'Project 5',
-    languages: ['HTML/CSS', 'Ruby on Rails', 'Javascript'],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
-    linkLiveVersion: '#',
-    linkToSource: '#',
-  },
-  {
-    image: project6,
-    title: 'Project 6',
-    languages: ['HTML/CSS', 'Ruby on Rails', '+1'],
-    description:
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi Ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi',
-    linkLiveVersion: '#',
-    linkToSource: '#',
-  },
-];
 
 const projects = arrOfProjects.map((element, index) => {
   const card = document.createElement('article');
@@ -98,13 +38,13 @@ for (let i = 0; i < projects.length; i += 1) {
   projectsSection.appendChild(projects[i]);
   if (i === 1) {
     const div = document.createElement('div');
-    div.className = 'project-decoration-1';
+    div.className = 'project-decoration project-decoration-1';
     projectsSection.appendChild(div);
   }
   if (i === 4) {
     for (let j = 0; j < 3; j += 1) {
       const div = document.createElement('div');
-      div.className = `project-decoration-${j + 2}`;
+      div.className = `project-decoration project-decoration-${j + 2}`;
       projectsSection.appendChild(div);
     }
   }
