@@ -31,7 +31,7 @@
     @include custom.respond-above(lg) {
       display: block;
       background-image: url("../assets/images/IntroSection/desktop-intro-image.svg");
-      background-size: 100%;
+      background-size: contain;
       background-repeat: no-repeat;
       width: 50%;
       height: 877px;
