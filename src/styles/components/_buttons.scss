@@ -13,6 +13,9 @@
   text-align: center;
   color: #fff;
   transition: background-color 0.2s;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
 
   @include custom.respond-above(lg) {
     width: 254px;
@@ -24,8 +27,10 @@
     font-style: normal;
     font-size: 18px;
     line-height: 24px;
-    text-align: center;
     color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   &:hover {
