@@ -4,10 +4,11 @@
   background: #1a2236;
   margin: 0;
   height: 118px;
-  padding-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   @include custom.respond-above(lg) {
-    display: flex;
     align-items: center;
     padding: 0;
     width: 100%;
@@ -19,7 +20,7 @@
     justify-content: center;
     gap: 15px;
 
-    @include custom.respond-above(lg) {
+    @include custom.respond-above(md) {
       flex-direction: row;
       justify-content: space-between;
       align-items: baseline;
@@ -33,6 +34,8 @@
       line-height: 24px;
       color: #92dcdc;
       text-decoration: none;
+      display: flex;
+      align-items: center;
 
       .link-image {
         margin-left: 16px;
@@ -43,9 +46,10 @@
       display: flex;
       list-style: none;
       padding: 0;
+      margin: 0;
       justify-content: space-between;
 
-      @include custom.respond-above(lg) {
+      @include custom.respond-above(md) {
         gap: 32px;
       }
 

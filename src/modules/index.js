@@ -1,5 +1,7 @@
 import '../styles/styles.scss';
 import arrOfProjects from './projects';
+import resume from '../assets/images/Leonardo-Albornoz.pdf';
+console.log(resume)
 
 const hamburgerMenu = document.querySelector('#hamburger');
 const menu = document.querySelector('#menu');
@@ -92,6 +94,14 @@ const openModal = (e) => {
   closeModalButton.addEventListener('click', closeModal);
   modal.classList.add('open-modal');
 };
+
+const aboutHeader = document.querySelector('#aboutHeader');
+const resumeLink = document.createElement('a');
+resumeLink.className = 'btn';
+resumeLink.href = resume;
+resumeLink.setAttribute('download', '');
+resumeLink.innerHTML = `<span>Get my CV<i class="fas fa-download"></i></span>`
+aboutHeader.appendChild(resumeLink);
 
 const projectButtons = document.querySelectorAll('.project-link');
 projectButtons.forEach((button) => {
