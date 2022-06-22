@@ -4,29 +4,16 @@
   
   @include custom.respond-above(lg) {
     display: grid;
-    grid-template-columns: repeat(9, 1fr);
-    grid-template-areas:
-      "title title   img0   first  first first first  first first"
-      "title title   img0   first  first first first  first first"
-      "title title   img0   first  first first first  first first"
-      "second second second img2   img2  img2  last   last  last"
-      "second second second img2   img2  img2  last   last  last"
-      "second second second img2   img2  img2  last   last  last"
-      "third  third  third  third  third .     fifth  fifth fifth"
-      "third  third  third  third  third .     fifth  fifth fifth"
-      "third  third  third  third  third .     fifth  fifth fifth"
-      "third  third  third  third  third img3  img3   img3  img3"
-      "third  third  third  third  third img3  img3   img3  img3"
-      "third  third  third  third  third img3  img3   img3  img3"
-      "img5   img5   .      .      img4  forth forth  forth ."
-      "img5   img5   .      .      img4  forth forth  forth .";
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 0.7fr 1fr 1fr;
+    grid-template-rows: 37.4vw 4vw 8vw 6vw 6vw 12vw repeat(3, 6vw) 9vw 9vw;
   }
 
   &-header {
     @include custom.respond-above(lg) {
       display: flex;
-      grid-area: title;
       flex-direction: column;
+      grid-column: 1/4;
+      grid-row: 1/2;
       align-items: flex-end;
       gap: 70px;
       transform: rotate(-90deg);
@@ -51,22 +38,29 @@
 
     &-1 {
       background-image: url(../assets/images/projects/project-decoration.svg);
-      grid-area: img2;
+      grid-column: 4/7;
+      grid-row: 2/6;
     }
 
     &-2 {
       background-image: url(../assets/images/projects/project-decoration2.svg);
-      grid-area: img3;
+      grid-column: 6/10;
+      grid-row: 7/10;
     }
 
     &-3 {
       background-image: url(../assets/images/projects/project-decoration3.svg);
-      grid-area: img5;
+      background-size: 45%;
+      grid-column: 1/4;
+      grid-row: 10/12;
     }
 
     &-4 {
       background-image: url(../assets/images/projects/project-decoration4.svg);
-      grid-area: img4;
+      background-size: 25%;
+      background-position: right top;
+      grid-column: 4/6;
+      grid-row: 10/12;
     }
   }
 
@@ -76,12 +70,8 @@
 
     &:hover {
       .card-body{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
         transform: translateY(0);
-        
+        opacity: 1;
       }
     }
 
@@ -99,14 +89,19 @@
       background-color: $primary;
       border: 0.333333px solid rgba(255, 255, 255, 0.1);
       backdrop-filter: blur(1px);
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
 
       @include custom.respond-above(lg) {
         position: absolute;
         display: flex;
+        opacity: 0;
         flex: 1;
         bottom: 0;
-        transform: translateY(calc(100% + 2px));
-        transition: transform 500ms ease-in-out;
+        transform: translateY(25%);
+        transition: 350ms ease-in-out;
       }
 
       .card-header {
@@ -177,9 +172,10 @@
 
     @include custom.respond-above(lg) {
       &-1 {
-        grid-area: first;
         width: 100%;
         max-height: 463px;
+        grid-row: 1/2;
+        grid-column: 4/10;
 
         .card-body {
           .card-header {
@@ -189,24 +185,29 @@
       }
 
       &-2 {
-        grid-area: second;
+        grid-row: 3/6;
+        grid-column: 1/4;
       }
 
       &-3 {
-        grid-area: last;
+        grid-row: 2/5;
+        grid-column: 7/10;
       }
 
       &-4 {
-        grid-area: fifth;
+        grid-row: 5/7;
+        grid-column: 7/10;
       }
 
       &-5 {
-        grid-area: third;
+        grid-row: 6/10;
+        grid-column: 1/6;
         }
       }
 
       &-6 {
-        grid-area: forth;
+        grid-row: 10/12;
+        grid-column: 6/9;
       }
     }
   }
