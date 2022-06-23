@@ -1,7 +1,19 @@
 import '../styles/styles.scss';
 import arrOfProjects from './projects';
 import resume from '../assets/images/Leonardo-Albornoz.pdf';
-console.log(resume)
+import navbar from './sections/navbar'
+import intro from './sections/intro'
+import work from './sections/work'
+import about from './sections/about'
+import contact from './sections/contact'
+import footer from './sections/footer'
+
+const main = document.createElement('main');
+main.append(intro, work, about, contact);
+// Append Sections
+document
+  .querySelector('body')
+  .append(navbar, main, footer);
 
 const hamburgerMenu = document.querySelector('#hamburger');
 const menu = document.querySelector('#menu');
