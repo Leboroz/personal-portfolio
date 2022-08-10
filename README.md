@@ -14,7 +14,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://leboroz.github.io/personal-portfolio/views)
+[Live Demo Link](https://leboroz.github.io/personal-portfolio)
 
 
 ## Getting Started
