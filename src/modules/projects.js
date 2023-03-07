@@ -1,11 +1,20 @@
 import project1 from '../assets/images/projects/project-1.jpg';
 import project2 from '../assets/images/projects/project-2.jpg';
-import project3 from '../assets/images/projects/project-3.jpg';
+import project7 from '../assets/images/projects/project-7.jpg';
 import project4 from '../assets/images/projects/project-4.jpg';
 import project5 from '../assets/images/projects/project-5.jpg';
 import project6 from '../assets/images/projects/project-6.jpg';
 
 const arrOfProjects = [
+  {
+    image: project7,
+    title: 'Building',
+    languages: ['Javascript', 'React-Redux', 'Node'],
+    description:
+      'Full-stack appication that allows users to create properties. When users are logged in they get redirected to a dashboard where they can visualize metadata about the properties. Users can sort and filter the properties by price or name.',
+    linkLiveVersion: 'https://eloquent-smakager-c12ce0.netlify.app/',
+    linkToSource: 'https://github.com/Leboroz/management-dashboard',
+  },
   {
     image: project1,
     title: 'RentUrTech',
@@ -23,15 +32,6 @@ const arrOfProjects = [
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are loged in the can create groups of transactions and see the total amout. Users can create transactions for one or many groups.',
     linkLiveVersion: 'https://leboroz-budget-app.herokuapp.com/',
     linkToSource: 'https://github.com/Leboroz/budget-app',
-  },
-  {
-    image: project3,
-    title: 'Ballhead',
-    languages: ['React-Redux', 'SASS', '+1'],
-    description:
-      'this is a design for a mobile app that fetches from an pollution API and displays the data. Built with React-Redux and SASS.',
-    linkLiveVersion: 'https://leboroz-ballhead.netlify.com ',
-    linkToSource: 'https://github.com/Leboroz/ballhead-app',
   },
   {
     image: project4,

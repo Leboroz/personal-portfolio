@@ -1,7 +1,9 @@
+import img from '../../assets/images/ic_link_teal.svg'
+
 const footer = document.createElement('footer');
 footer.className = 'footer';
 footer.innerHTML = `<div class="footer-content margin-x">
-  <a class="link-resume" href="#About">Get my Resume <img class="link-image" src="./src/assets/images/ic_link_teal.svg"
+  <a class="link-resume" href="#About">Get my Resume <img class="link-image" src="${img}"
       alt="linkArrow"></a>
   <ul class="links-to-social">
     <li><a class="link-to-social" href="https://stackoverflow.com/users/16168440/leboroz"><i class="fab fa-stack-overflow"></i></a></li>
