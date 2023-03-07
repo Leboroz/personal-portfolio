@@ -17,18 +17,20 @@ In my free time, I play a lot of video games, participate in hackathons, and pra
   <div class="square square-1">
     <h2>Languages</h2>
     <ul>
-      <li><span>JavaScript (ES5/ES6)</span></li>
+      <li><span>JavaScript(ES5/ES6)</span></li>
       <li><span>Ruby</span></li>
       <li><span>HTML</span></li>
       <li><span>CSS</span></li>
+      <li><span>Node</span></li>
     </ul>
     <div class="image image-lang"></div>
   </div>
   <div class="square square-2">
     <h2>Frameworks</h2>
     <ul>
-      <li><span>Bootstrap</span></li>
+      <li><span>React</span></li>
       <li><span>Ruby on rails</span></li>
+      <li><span>Bootstrap</span></li>
       <li><span>RSpec</span></li>
       <li><span>Capibara</span></li>
       <li><span>Jest</span></li>
@@ -38,9 +40,9 @@ In my free time, I play a lot of video games, participate in hackathons, and pra
   <div class="square square-3">
     <h2>Skills</h2>
     <ul>
-      <li><span>Codekit</span></li>
       <li><span>Figma</span></li>
-      <li><span>GitHub</span></li>
+      <li><span>Talend</span></li>
+      <li><span>Git/GitHub</span></li>
       <li><span>Vim</span></li>
       <li><span>Bash</span></li>
     </ul>

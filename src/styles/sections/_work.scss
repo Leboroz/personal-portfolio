@@ -178,7 +178,6 @@
     @include custom.respond-above(lg) {
       &-1 {
         width: 100%;
-        max-height: 463px;
         grid-row: 1/2;
         grid-column: 4/10;
 

@@ -1,7 +1,7 @@
 const contact = document.createElement('section');
 contact.id = 'Contact';
 contact.className = 'contact-form margin-top';
-contact.innetHTML = `<div class="contact-mobile-image"></div>
+contact.innerHTML = `<div class="contact-mobile-image"></div>
 <div class="content margin-x">
   <h2 class="display-1">Get started</h2>
   <p class="par">Let's work together or just say hello!</p>
