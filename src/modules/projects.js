@@ -30,7 +30,7 @@ const arrOfProjects = [
     languages: ['Ruby on rails', 'Bootstrap', '+1'],
     description:
       'This is a ruby on rails application that allows to create users and authenticates them using devise. When users are loged in the can create groups of transactions and see the total amout. Users can create transactions for one or many groups.',
-    linkLiveVersion: 'https://leboroz-budget-app.herokuapp.com/',
+    linkLiveVersion: 'https://rails-budget-app-fqfy.onrender.com',
     linkToSource: 'https://github.com/Leboroz/budget-app',
   },
   {
