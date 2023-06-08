@@ -1,25 +1,21 @@
 import '../styles/styles.scss';
 import arrOfProjects from './projects';
 import resume from '../assets/images/Leonardo-Albornoz.pdf';
-import navbar from './sections/navbar'
-import intro from './sections/intro'
-import work from './sections/work'
-import about from './sections/about'
-import contact from './sections/contact'
-import footer from './sections/footer'
+import { navbar, modal } from './components'
+import { intro, work, about, footer, contact, introMobileImage } from './sections'
 
 const main = document.createElement('main');
 main.append(intro, work, about, contact);
 // Append Sections
 document
   .querySelector('body')
-  .append(navbar, main, footer);
+  .append(navbar, main, footer, modal);
 
 const hamburgerMenu = document.querySelector('#hamburger');
 const menu = document.querySelector('#menu');
 const closeMenu = document.querySelector('#closeMenu');
 const closeNavLink = document.querySelectorAll('li.nav-link a');
-const openAndClose = function () {
+const openAndClose = function() {
   menu.classList.toggle('visible-menu');
 };
 hamburgerMenu.addEventListener('click', openAndClose);
@@ -27,6 +23,7 @@ closeMenu.addEventListener('click', openAndClose);
 closeNavLink.forEach((element) => {
   element.addEventListener('click', openAndClose);
 });
+let index = 0;
 // ----------------------------------------------Array of projects
 
 const projects = arrOfProjects.map((element, index) => {
@@ -43,7 +40,7 @@ const projects = arrOfProjects.map((element, index) => {
         <li class="lang">${element.languages[1]}</li>
         <li class="lang">${element.languages[2]}</li>
       </ul>
-      <button class="project-link" type="button">See this project<i class="fas fa-arrow-right"></i></button>
+      <button data-card-id="${index}" class="project-link" type="button">See this project<i class="fas fa-arrow-right"></i></button>
     </div>`;
   return card;
 });
@@ -67,43 +64,41 @@ for (let i = 0; i < projects.length; i += 1) {
 const modaBody = document.querySelector('#modal_body');
 
 const closeModal = () => {
-  modaBody.innerHTML = '';
   document.querySelector('#modal').classList.remove('open-modal');
 };
+const closeModalButton = document.querySelector('#close_modal');
+closeModalButton.addEventListener('click', closeModal);
+
+const fillModal = (project, modal) => {
+  modal.querySelector('#title').innerText = project.title;
+  const image = modal.querySelector('#image');
+  image.src = project.image
+  image.alt = project.title
+  modal.querySelector('#description').innerText = project.description;
+  modal.querySelector('#seeLive').setAttribute("href", project.linkLiveVersion);
+  modal.querySelector('#seeSource').setAttribute("href", project.linkToSource);
+}
+
+const move = (index) => {
+  fillModal(arrOfProjects[index], modal)
+}
+
+modal.querySelector('#next_project').addEventListener('click', () => {
+  if (index < arrOfProjects.length - 1)
+    move(++index)
+})
+
+modal.querySelector('#previous_project').addEventListener('click', () => {
+  if (index > 0)
+    move(--index)
+})
+
 
 const openModal = (e) => {
-  const currentTitle = e.target.parentNode.children[0].innerHTML;
+  index = parseInt(e.target.dataset.cardId);
+  const project = arrOfProjects[index];
   const modal = document.getElementById('modal');
-  const project = arrOfProjects.filter((pro) => pro.title === currentTitle)[0];
-  const modalTop = document.createElement('div');
-  modalTop.className = 'top';
-  modalTop.innerHTML = `<h1 class="display-2">${project.title}</h1>
-      <span id="close_modal" class="close-modal">x</span>`;
-  const languages = document.createElement('ul');
-  languages.className = 'modal-languages';
-  for (let i = 0; i < project.languages; i += 1) {
-    const lang = document.createElement('li');
-    lang.className = 'modal-language';
-    lang.innerHTML = project.languages[i];
-    languages.appendChild(lang);
-  }
-  const imageWrapper = document.createElement('div');
-  imageWrapper.className = 'image-wrap';
-  imageWrapper.innerHTML = `<img src="${project.image}" alt="${project.title}" class="modal-image">`;
-  const modalBody = document.createElement('div');
-  modalBody.className = 'modal-body';
-  modalBody.innerHTML = ` <p class="par">${project.description}</p>
-  <div class="go-to-wrapper">
-    <a href="${project.linkLiveVersion}" class="btn btn-secondary">See live<i class="fas fa-external-link-alt"></i></a>
-    <a href="${project.linkToSource}" class="btn btn-secondary">See source<i class="fab fa-github"></i></a>
-  </div>
-  <div class="slider-wrapper">
-    <button class="slide"><i class="fas fa-long-arrow-alt-left"></i>Previous project</button>
-    <button class="slide">Next project<i class="fas fa-long-arrow-alt-right"></i></button>
-  </div>`;
-  modaBody.append(modalTop, languages, imageWrapper, modalBody);
-  const closeModalButton = document.querySelector('#close_modal');
-  closeModalButton.addEventListener('click', closeModal);
+  fillModal(project, modal);
   modal.classList.add('open-modal');
 };
 

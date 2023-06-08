@@ -1,4 +1,4 @@
-const about = document.createElement('section');
+export const about = document.createElement('section');
 about.id = 'About';
 about.className = 'about-section margin-x margin-top';
 about.innerHTML = `<article id="aboutHeader" class="about-header">
@@ -50,5 +50,3 @@ In my free time, I play a lot of video games, participate in hackathons, and pra
   </div>
   <div class="squares-decoration"></div>
 </article>`
-
-export default about;

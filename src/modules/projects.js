@@ -21,7 +21,7 @@ const arrOfProjects = [
     languages: ['React-Redux', 'SASS', 'Ruby on Rails'],
     description:
       'This is a React application part of a full-stack project called "RentUrTech". The main goal of this project is to provide users with an environment to reserve a specific product for a set amount of time. Thus, in this application users can create an account, can log in, and can see all the added equipment or the details of one. They will be required to log in to manage their own reservations. For creating and destroying equipment, the user needs a proper role. Feel free to take this project and modify it for your own business use!',
-    linkLiveVersion: 'https://renturtech.netlify.app/',
+    linkLiveVersion: 'https://renturtechrender.netlify.app/',
     linkToSource: 'https://github.com/Final-Capstone-Elite-Group/RentUrTechFrontend',
   },
   {

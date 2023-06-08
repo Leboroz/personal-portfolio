@@ -1,4 +1,4 @@
-const contact = document.createElement('section');
+export const contact = document.createElement('section');
 contact.id = 'Contact';
 contact.className = 'contact-form margin-top';
 contact.innerHTML = `<div class="contact-mobile-image"></div>
@@ -29,5 +29,3 @@ contact.innerHTML = `<div class="contact-mobile-image"></div>
 </div>
 <div class="contact-image contact-image-1"></div>
 <div class="contact-image contact-image-2"></div>`
-
-export default contact;

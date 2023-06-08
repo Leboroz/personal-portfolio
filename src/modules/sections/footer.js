@@ -1,6 +1,6 @@
 import img from '../../assets/images/ic_link_teal.svg'
 
-const footer = document.createElement('footer');
+export const footer = document.createElement('footer');
 footer.className = 'footer';
 footer.innerHTML = `<div class="footer-content margin-x">
   <a class="link-resume" href="#About">Get my Resume <img class="link-image" src="${img}"
@@ -14,5 +14,3 @@ footer.innerHTML = `<div class="footer-content margin-x">
     <li><a class="link-to-social" href="https://angel.co/u/leonardo-albornoz"><i class="fab fa-angellist"></i></a></li>
   </ul>
 </div>`
-
-export default footer;

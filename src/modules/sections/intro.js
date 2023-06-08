@@ -1,4 +1,4 @@
-const intro = document.createElement('section');
+export const intro = document.createElement('section');
 intro.className = "intro-section margin-top"
 intro.id = 'Hello'
 intro.innerHTML = `<article class="content margin-x">
@@ -14,5 +14,3 @@ intro.innerHTML = `<article class="content margin-x">
 
 export const introMobileImage = document.createElement('div');
 introMobileImage.className = 'intro-mobile-image';
-
-export default intro;

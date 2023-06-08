@@ -1,4 +1,4 @@
-const work = document.createElement('section');
+export const work = document.createElement('section');
 work.className = 'work-section margin-top';
 work.id = 'Portfolio';
 work.innerHTML = `<header class="work-section-header">
@@ -7,5 +7,3 @@ work.innerHTML = `<header class="work-section-header">
   </h1>
   <div class="dots-image"></div>
 </header>`
-
-export default work;
