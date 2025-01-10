@@ -3,18 +3,20 @@
 .intro-section {
   @include custom.respond-above(lg) {
     display: flex;
+    padding-inline: 10%;
+    gap: 20px;
+    max-height: 100vh;
   }
 
 
 
   .content {
     @include custom.respond-above(lg) {
-      width: 40%;
-      margin-top: 160px;
       display: flex;
+      flex: 1;
       flex-direction: column;
       gap: 46px;
-      margin-right: 0;
+      margin: 0;
 
       .main-card {
         display: flex;
@@ -30,11 +32,13 @@
 
     @include custom.respond-above(lg) {
       display: block;
+      flex: 1;
       background-image: url("../assets/images/IntroSection/desktop-intro-image.svg");
+
       background-size: contain;
       background-repeat: no-repeat;
-      width: 50%;
-      height: 877px;
+      // height: 100%;
+      aspect-ratio: 1 / 1.2493;
     }
   }
 }

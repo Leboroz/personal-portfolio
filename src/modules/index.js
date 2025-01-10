@@ -106,7 +106,7 @@ const aboutHeader = document.querySelector('#aboutHeader');
 const resumeLink = document.createElement('a');
 resumeLink.className = 'btn';
 resumeLink.href = resume;
-resumeLink.setAttribute('download', '');
+resumeLink.setAttribute('download', 'leonardo-albornoz-resume');
 resumeLink.innerHTML = `<span>Get my CV<i class="fas fa-download"></i></span>`
 aboutHeader.appendChild(resumeLink);
 
@@ -170,8 +170,8 @@ const formFields = Array.of(...document.getElementsByClassName('form-field'));
 let fields = { name: String, email: String, message: String };
 
 if (storageAvailable('localStorage')) {
-  if (localStorage.getItem('fields')) {
-    fields = JSON.parse(localStorage.getItem('fields'));
+  if (sessionStorage.getItem('fields')) {
+    fields = JSON.parse(sessionStorage.getItem('fields'));
     formFields.forEach((field) => {
       if (fields[field.id]) {
         field.value = fields[field.id];
