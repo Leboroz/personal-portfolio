@@ -74,6 +74,11 @@ const fillModal = (project, modal) => {
   const image = modal.querySelector('#image');
   image.src = project.image
   image.alt = project.title
+  modal.querySelector('#languages').innerHTML = `
+        <li class="modal-language">${project.languages[0]}</li>
+        <li class="modal-language">${project.languages[1]}</li>
+        <li class="modal-language">${project.languages[2]}</li>
+`
   modal.querySelector('#description').innerText = project.description;
   modal.querySelector('#seeLive').setAttribute("href", project.linkLiveVersion);
   modal.querySelector('#seeSource').setAttribute("href", project.linkToSource);

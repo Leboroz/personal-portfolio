@@ -16,8 +16,8 @@ modal.innerHTML = `
         </ul>
           <p id="description" class="par"></p>
           <div class="go-to-wrapper">
-            <a id="seeLive" href="" class="btn btn-secondary">See live<i class="fas fa-external-link-alt"></i></a>
-            <a id="seeSource" href="" class="btn btn-secondary">See source<i class="fab fa-github"></i></a>
+            <a id="seeLive" href="" class="btn btn-secondary" target="_blank">See live<i class="fas fa-external-link-alt"></i></a>
+            <a id="seeSource" href="" class="btn btn-secondary" target="_blank">See source<i class="fab fa-github"></i></a>
           </div>
           <div class="slider-wrapper">
             <button id="previous_project" class="slide"><i class="fas fa-long-arrow-alt-left"></i>Previous project</button>

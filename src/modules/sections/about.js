@@ -3,15 +3,18 @@ about.id = 'About';
 about.className = 'about-section margin-x margin-top';
 about.innerHTML = `<article id="aboutHeader" class="about-header">
 <h1 class="display-1">About</h1>
-<p class="par">Hello! My name is Leonardo Albornoz and I'm a full-stack web developer gradated from Microverse, a remote software development school.
+<p class="par">I am a Full-stack Developer with over two years of experience in building web applications. I graduated from Microverse,
+a world-class software development school, where I learned and practiced agile methodologies, enterprise standard git-flow,
+and pair programming with excellent developers from all around the world.
+<br/>
+<br/>
+Most recently, I worked as a Full-stack Developer at <a href="https://territoriodigital.co/" class="link">Territorio digital S.A.S Inc <i class="fas fa-external-link-alt"></i></a>, where I collaborated to build
+<a class="link" href="https://light-brain.com/">Light Brain <i class="fas fa-external-link-alt"></i></a> a powerfull and comprehensive reporting system that integrates 
+data from Basis, Google Ads, and Facebook Marketing, providing valuable analytics for clients.
+<br/>
+<br/>
 
-At Microverse, I code every day with other developers around the world and have learned the important skills of communication. 
-
-Currently, I am polishing my skills using React.js and Ruby and considering adding Vue.js to my stack. 
-
-I love coding specifically because I love the puzzle-solving aspect of it. I'm the sort of person who does DSA problems for fun. I was known to be the fastest Rubik's cube solver in my high school.
-
-In my free time, I play a lot of video games, participate in hackathons, and practice competitive programming.</p>
+</p>
 </article>
 <article class="squares-wrapper">
   <div class="square square-1">

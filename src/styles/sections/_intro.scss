@@ -5,7 +5,7 @@
     display: flex;
     padding-inline: 10%;
     gap: 20px;
-    max-height: 100vh;
+    min-height: 100vh;
   }
 
 
@@ -35,7 +35,7 @@
       flex: 1;
       background-image: url("../assets/images/IntroSection/desktop-intro-image.svg");
 
-      background-size: contain;
+      background-size: cover;
       background-repeat: no-repeat;
       // height: 100%;
       aspect-ratio: 1 / 1.2493;

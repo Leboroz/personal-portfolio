@@ -20,7 +20,7 @@ const arrOfProjects = [
     title: 'RentUrTech',
     languages: ['React-Redux', 'SASS', 'Ruby on Rails'],
     description:
-      'This is a React application part of a full-stack project called "RentUrTech". The main goal of this project is to provide users with an environment to reserve a specific product for a set amount of time. Thus, in this application users can create an account, can log in, and can see all the added equipment or the details of one. They will be required to log in to manage their own reservations. For creating and destroying equipment, the user needs a proper role. Feel free to take this project and modify it for your own business use!',
+      'This website emulates a business where users can reserve a specific piece of equipment for a set amount of days.If the user is an admin, additional options for creating or deleting equipment are available.',
     linkLiveVersion: 'https://renturtechrender.netlify.app/',
     linkToSource: 'https://github.com/Final-Capstone-Elite-Group/RentUrTechFrontend',
   },
@@ -39,16 +39,16 @@ const arrOfProjects = [
     languages: ['React-Redux', 'Bootstrap', '+1'],
     description:
       'A web application for a company that provides commercial and scientific space travel services. The application allows users to book rockets and join selected space missions using real live data from the SpaceX API.',
-    linkLiveVersion: 'https://space-travelers.herokuapp.com/',
+    linkLiveVersion: 'https://space-travelers-2.onrender.com/',
     linkToSource: 'https://github.com/Leboroz/space-travelers',
   },
   {
     image: project5,
     title: 'LATAM Annual Conference',
     languages: ['HTML/CSS', 'SASS', 'Javascript'],
-    description: 'This is a website about a conference in Latin America.',
-    linkLiveVersion: 'https://leboroz.github.io/capstone-project-1/',
-    linkToSource: 'https://github.com/Leboroz/capstone-project-1',
+    description: 'This is a simple landing page built using HTML/SCSS and JavaScript. This page provides basic navigation functionality and was made using an appropriate SCSS file structure.',
+    linkLiveVersion: 'https://leboroz.github.io/latam-annual-conference/',
+    linkToSource: 'https://github.com/Leboroz/latam-annual-conference',
   },
   {
     image: project6,

@@ -10,6 +10,26 @@ $grid-breakpoints: (
   xxl: 1400px,
 );
 
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 12px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #D62929;
+}
+
 @mixin respond-above($breakpoint) {
   // If the breakpoint exists in the map.
   @if map-has-key($grid-breakpoints, $breakpoint) {
@@ -48,6 +68,13 @@ body {
 .dark-mode {
   background-color: #22272e;
 }
+.link {
+  font-weight: bold;
+  color: $primary;
+  &:hover {
+    color: rgba($color: $primary, $alpha: 0.4);
+  }
+}
 
 .display-1 {
   margin: 32px 0;
@@ -70,6 +97,9 @@ body {
   line-height: 21px;
   letter-spacing: -0.01em;
   color: $primary;
+  @include respond-above(lg){
+    font-size: 18px;
+  }
 
   body.dark-mode & {
     color: #fff;
